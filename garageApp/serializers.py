@@ -42,6 +42,7 @@ class SharedVehicleDataSerializer(serializers.ModelSerializer):
                 "is_occupied",
                 "sharing_enabled",
                 "is_request_pending",
+                "idleTimeOption",
                 "max_assist_level"
             )
             

@@ -81,6 +81,7 @@ class SharedVehicleData(models.Model):
     is_occupied = models.BooleanField()
     sharing_enabled = models.BooleanField()
     is_request_pending = models.BooleanField()
+    idleTimeOption = models.IntegerField()
     max_assist_level = models.IntegerField()
     
 class SharedVehicleOwnerData(models.Model):

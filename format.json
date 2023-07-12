@@ -10,6 +10,7 @@
         "is_occupied": false,
         "sharing_enabled": true,
         "is_request_pending": false,
+        "idleTimeOption": 2,
         "max_assist_level": 2
     },
     "shared_vehicle_owner_data": {
