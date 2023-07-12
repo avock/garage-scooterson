@@ -106,7 +106,7 @@
             };
 
             var xhr = new XMLHttpRequest();
-            xhr.open("POST", "/garage");
+            xhr.open("POST", "https://garage-scooterson.vercel.app/garage");
             xhr.setRequestHeader("Content-Type", "application/json");
             xhr.onreadystatechange = function() {
                 if (xhr.readyState === 4 && xhr.status === 200) {
