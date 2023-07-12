@@ -3,6 +3,7 @@
 
 This document provides an overview of the available endpoints in the Scooterson Garage API.
 (temporary) try it out on http://localhost:8080/
+UPDATE: try it out on https://garage-scooterson.vercel.app/
 
 Please read the ```projectSetup.md``` file to setup your coding environment.
 
