@@ -185,6 +185,9 @@ class GarageUpdater(serializers.ModelSerializer):
             'vehicle_owner_id',
             'vehicle_uuid',
             'vehicle_pub_key',
+            'particle_id',
+            'particle_serial',
+            'particle_name'
         ]
     
     def update(self, instance, validated_data):
@@ -210,6 +213,9 @@ class GarageDeserializer(serializers.ModelSerializer):
             'vehicle_owner_id',
             'vehicle_uuid',
             'vehicle_pub_key',
+            'particle_id',
+            'particle_serial',
+            'particle_name',
         ]
         
 class VehicleInfoDeserializer(serializers.Serializer):
