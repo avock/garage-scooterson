@@ -6,7 +6,7 @@
 <body>
     <header>Vehicle Generators</header>
 
-    <form id="form" class="topBefore">
+    <form id="form-generate" class="topBefore">
               <label for="vehicleId">Vehicle ID:</label>
               <input id="vehicleId" type="text">
               
@@ -16,10 +16,10 @@
       <input id="submit" type="submit" value="Add Vehicle">
       <div id="result" ></div>
       
-    </form>
-
+    </form>    
+    
     <script>
-        document.getElementById('form').addEventListener('submit', function(event) {
+        document.getElementById('form-generate').addEventListener('submit', function(event) {
             event.preventDefault();
 
             var vehicleId = document.getElementById('vehicleId').value;
@@ -140,7 +140,8 @@
       letter-spacing: 7px;
     }
 
-    #form {
+    #form-generate,
+    #form-update {
       position: relative;
       width: 500px;
       margin: 50px auto 100px auto;
