@@ -83,17 +83,6 @@ class SharedVehicleOwnerDataSerializer(serializers.ModelSerializer):
                 "email_verified",
                 "user_address"
             )
-            
-    def update(self, instance, validated_data):
-        shared_vehicle_owner_data = validated_data.pop('shared_vehicle_owner_data', {})
-        
-        for field in validated_data.keys():
-            new_field = validated_data.get(field, getattr(instance, field))
-            setattr(instance, field, new_field)
-    
-        instance.save()
-        
-        return instance
 
 class VehicleInfoSerializer(serializers.ModelSerializer):
     garage = serializers.PrimaryKeyRelatedField(read_only=True)
