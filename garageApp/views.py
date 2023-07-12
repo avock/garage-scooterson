@@ -94,7 +94,6 @@ def garage_list(request):
                 return JsonResponse(vehicle_status_serializer.errors, status=status.HTTP_400_BAD_REQUEST)
         return JsonResponse(garage_serializer.errors, status=status.HTTP_400_BAD_REQUEST)
  
- 
     elif request.method == 'DELETE':
         count = GarageApp.objects.all().count()
         GarageApp.objects.all().delete()     
@@ -185,16 +184,24 @@ def garage_detail(request, pk):
 
         if garage_serializer.is_valid():
             garage_serializer.save()
-            vehicle_status_serializer.update(vehicle_status_instance, vehicle_status_data)
-            vehicle_info_serializer.update(vehicle_info_instance, vehicle_info_data)
-            shared_vehicle_data_serializer.update(shared_vehicle_data_instance, shared_vehicle_data)
-            shared_vehicle_owner_data_serializer.update(shared_vehicle_owner_data_instance, shared_vehicle_owner_data)
             
             success_message = f"Vehicle {pk} updated successfully"
-    
+            
+            if vehicle_status_data:
+                vehicle_status_serializer.update(vehicle_status_instance, vehicle_status_data)
+
+            if vehicle_info_data:
+                vehicle_info_serializer.update(vehicle_info_instance, vehicle_info_data)
+
+            if shared_vehicle_data:
+                shared_vehicle_data_serializer.update(shared_vehicle_data_instance, shared_vehicle_data)
+
+            if shared_vehicle_owner_data:
+                shared_vehicle_owner_data_serializer.update(shared_vehicle_owner_data_instance, shared_vehicle_owner_data)
+
             response_data = {
                 "response": success_message,
-                "Changes made": garage_data
+                "Changes": garage_data
             }
             
             return JsonResponse(response_data)

@@ -191,8 +191,6 @@ class GarageUpdater(serializers.ModelSerializer):
         ]
     
     def update(self, instance, validated_data):
-        # vehicle_info_data = validated_data.pop('vehicle_info', {})
-        vehicle_status_data = validated_data.pop('vehicle_status', {})
         
         for field in validated_data.keys():
             if field not in ['vehicle_status', 'vehicle_info', 'shared_vehicle_data', 'shared_vehicle_owner_data']:
