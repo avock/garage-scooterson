@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Customize Request Body</title>
+    <title>Vehicle Generator</title>
 </head>
 <body>
     <header>Vehicle Generators</header>
@@ -14,11 +14,12 @@
               <input id="ownerId" type="text">
 
       <input id="submit" type="submit" value="Add Vehicle">
+      <div id="result" ></div>
       
     </form>
 
     <script>
-        document.getElementById('customizationForm').addEventListener('submit', function(event) {
+        document.getElementById('form').addEventListener('submit', function(event) {
             event.preventDefault();
 
             var vehicleId = document.getElementById('vehicleId').value;
@@ -30,10 +31,14 @@
                 "vehicle_owner_id": parseInt(ownerId),
                 "vehicle_uuid": "0818a87e-1f2a-486b-be0b-a1481a18476d",
                 "vehicle_pub_key": "wveFrDR9TsaNSoDdZvh8qYG1GTW/UQpzYtuRXMyhHXk=",
+                "particle_id": "12345",
+                "particle_serial": "12345",
+                "particle_name": "yogurt",
                 "shared_vehicle_data": {
                     "is_occupied": false,
                     "sharing_enabled": true,
                     "is_request_pending": false,
+                    "idle_time_option": 2,
                     "max_assist_level": 2
                 },
                 "shared_vehicle_owner_data": {
@@ -101,7 +106,7 @@
             };
 
             var xhr = new XMLHttpRequest();
-            xhr.open("POST", "http://localhost:8000/garage");
+            xhr.open("POST", "/garage");
             xhr.setRequestHeader("Content-Type", "application/json");
             xhr.onreadystatechange = function() {
                 if (xhr.readyState === 4 && xhr.status === 200) {
