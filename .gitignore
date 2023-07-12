@@ -1,0 +1,8 @@
+garage-env/lib/
+dump.txt
+vehiclesList.json
+test.json
+.env
+.vercel
+db.sqlite3
+*.pyc
