@@ -128,6 +128,9 @@ class GarageSerializer(serializers.ModelSerializer):
             'vehicle_owner_id',
             'vehicle_uuid',
             'vehicle_pub_key',
+            'particle_id',
+            'particle_serial',
+            'particle_name',
             'shared_vehicle_data',
             'shared_vehicle_owner_data',
             'vehicle_info',
@@ -145,6 +148,7 @@ class GarageSerializer(serializers.ModelSerializer):
         configuration_data = vehicle_info_data.pop('configuration')
         dimension_data = vehicle_info_data.pop('dimension')
         parameters_data = vehicle_info_data.pop('parameters')
+        
         # handling nested json objects for shared_vehicle_owner_data
         name_data = shared_vehicle_owner_data_input.pop('name')
         user_address_data = shared_vehicle_owner_data_input.pop('user_address')

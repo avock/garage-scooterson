@@ -11,6 +11,9 @@ class GarageApp(models.Model):
     vehicle_owner_id = models.IntegerField()
     vehicle_uuid = models.CharField(max_length=100)
     vehicle_pub_key = models.CharField(max_length=100)
+    particle_id = models.CharField(max_length=100)
+    particle_serial = models.CharField(max_length=100)
+    particle_name = models.CharField(max_length=100)
     
 class VehicleStatus(models.Model):
     garage = models.OneToOneField(GarageApp ,on_delete=models.CASCADE ,primary_key=True , related_name='vehicle_status')

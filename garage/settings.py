@@ -82,18 +82,18 @@ WSGI_APPLICATION = 'garage.wsgi.app'
 
 DATABASES = {
     # local database 
-    # 'default': {
-    #     'ENGINE': 'django.db.backends.postgresql',
-    #     'NAME': 'garagedb',
-    #     'USER': 'postgres',
-    #     'PASSWORD': '123',
-    #     'HOST': '127.0.0.1',
-    #     'PORT': '5432',
-    # }
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'railway',
+        'USER': 'postgres',
+        'PASSWORD': 'DjdFnPnDBDjkPjkSijb8',
+        'HOST': 'containers-us-west-188.railway.app',
+        'PORT': '7885',
     }
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.sqlite3',
+    #     'NAME': BASE_DIR / 'db.sqlite3',
+    # }
 }
 
 

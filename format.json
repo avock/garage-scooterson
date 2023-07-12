@@ -3,6 +3,9 @@
     "vehicle_owner_id": 1,
     "vehicle_uuid": "0818a87e-1f2a-486b-be0b-a1481a18476d",
     "vehicle_pub_key": "wveFrDR9TsaNSoDdZvh8qYG1GTW/UQpzYtuRXMyhHXk=",
+    "particle_id": "12345",
+    "particle_serial": "12345",
+    "particle_name": "yogurt",
     "shared_vehicle_data": {
         "is_occupied": false,
         "sharing_enabled": true,
@@ -37,7 +40,7 @@
         "weight_in_kg": 70
     },
     "vehicle_info": {
-        "model": "RolleyPlus",
+        "model": "Rolley Plus",
         "type": "Scooter",
         "manufacture": "Scooterson",
         "model_year": 2023,
