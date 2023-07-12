@@ -15,6 +15,9 @@ class GarageApp(models.Model):
     particle_serial = models.CharField(max_length=100)
     particle_name = models.CharField(max_length=100)
     
+    class Meta:
+        verbose_name_plural = "Garage"
+    
 class VehicleStatus(models.Model):
     garage = models.OneToOneField(GarageApp ,on_delete=models.CASCADE ,primary_key=True , related_name='vehicle_status')
 
