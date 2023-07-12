@@ -7,6 +7,6 @@ from .models import GarageApp, VehicleStatus, VehicleInfo, UserVehicles, SharedV
 admin.site.register(GarageApp) 
 admin.site.register(VehicleStatus)
 admin.site.register(VehicleInfo)
-admin.site.register(UserVehicles)
+# admin.site.register(UserVehicles)
 admin.site.register(SharedVehicleData)
 admin.site.register(SharedVehicleOwnerData)
