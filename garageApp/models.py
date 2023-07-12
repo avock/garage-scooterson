@@ -31,6 +31,9 @@ class VehicleStatus(models.Model):
     trip_meter = models.IntegerField()
     gear_mode = models.IntegerField()
     
+    class Meta:
+        verbose_name_plural = "Vehicle Status"
+    
 class VehicleInfo(models.Model):
     
     COLOR_CHOICES = [
@@ -78,6 +81,9 @@ class VehicleInfo(models.Model):
     gsm = models.CharField(max_length=100)
     gps = models.CharField(max_length=100)
     
+    class Meta:
+        verbose_name_plural = "Vehicle Info"
+    
 class SharedVehicleData(models.Model):
     garage = models.OneToOneField(GarageApp, on_delete=models.CASCADE, primary_key=True, related_name='shared_vehicle_data')
     
@@ -86,6 +92,9 @@ class SharedVehicleData(models.Model):
     is_request_pending = models.BooleanField()
     idle_time_option = models.IntegerField()
     max_assist_level = models.IntegerField()
+    
+    class Meta:
+        verbose_name_plural = "Shared Vehicle Data"
     
 class SharedVehicleOwnerData(models.Model):
     garage = models.OneToOneField(GarageApp, on_delete=models.CASCADE, primary_key=True, related_name='shared_vehicle_owner_data')
@@ -108,6 +117,9 @@ class SharedVehicleOwnerData(models.Model):
     email_verified = models.BooleanField()
     latitude = models.CharField(max_length=20)
     longitude = models.CharField(max_length=20)
+    
+    class Meta:
+        verbose_name_plural = "Shared Vehicle Owner Data"
     
 class UserVehicles(models.Model):
     userID = models.IntegerField()
