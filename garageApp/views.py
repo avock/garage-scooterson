@@ -111,14 +111,16 @@ def garage_list(request):
 def garage_detail(request, pk):
     # find garage by pk (id)
     filtered_garage = GarageApp.objects.filter(vehicle_id=pk)
-    if (not filtered_garage):
+    particle_id_filtered_garage = GarageApp.objects.filter(particle_id=pk)
+    
+    if (not filtered_garage and not particle_id_filtered_garage):
         error_message = f"Vehicle '{pk}' does not exist."
         return JsonResponse(
             {"response": error_message}, 
             status=status.HTTP_404_NOT_FOUND)
     
     if request.method == 'GET': 
-        garage_deserializer = GarageDeserializer(filtered_garage, many=True)
+        garage_deserializer = GarageDeserializer(particle_id_filtered_garage, many=True)
         garage_data = garage_deserializer.data
         
         # For now assuming > 1 garage with same vehicle_id, to remove in the future
@@ -150,7 +152,7 @@ def garage_detail(request, pk):
             garage['shared_vehicle_owner_data'] = shared_vehicle_owner_data_values
             
         # 'safe=False' for objects serialization
-        success_message = f"GET Succesful. Found vehicle with ID={pk}."
+        success_message = f"GET Succesful. Found vehicle with Particle ID={pk}."
         return JsonResponse(
             {"response": success_message,
              "vehicles": garage_data},
