@@ -104,7 +104,7 @@ def garage_list(request):
             success_message = 'There are no vehicles in the garage.'
             
         return JsonResponse(
-            {'message': success_message},
+            {'response': success_message},
             status=status.HTTP_204_NO_CONTENT)            
             
 @api_view(['GET', 'POST', 'DELETE'])
@@ -153,7 +153,7 @@ def garage_detail(request, pk):
         success_message = f"GET Succesful. Found vehicle with ID={pk}."
         return JsonResponse(
             {"response": success_message,
-             "data": garage_data},
+             "vehicles": garage_data},
             safe=False)
     
     elif request.method == 'POST':
@@ -201,7 +201,7 @@ def garage_detail(request, pk):
 
             response_data = {
                 "response": success_message,
-                "Changes": garage_data
+                "changes": garage_data
             }
             
             return JsonResponse(response_data)
@@ -282,12 +282,12 @@ def user_vehicles(request, user_id, id):
                 
                 success_message = f"Vehicle with ID={id} is no longer binded to user with ID={user_id}"
                 return JsonResponse(
-                    {"message": success_message},
+                    {"response": success_message},
                     status=status.HTTP_201_CREATED)
             else:
                 error_message = f"Binded pair of Vehicle ID={id} and User ID={user_id} not found"
                 return JsonResponse(
-                    {"message": error_message},
+                    {"response": error_message},
                     status=status.HTTP_400_BAD_REQUEST)
             
     except IntegrityError:
@@ -339,12 +339,12 @@ def user(request, user_id):
             
             success_message = f"User with ID={user_id} is no longer binded to any vehicles"
             return JsonResponse(
-                {"message": success_message},
+                {"response": success_message},
                 status=status.HTTP_201_CREATED)
         else:
             error_message = f"User with ID={user_id} is not found"
             return JsonResponse(
-                {"message": error_message},
+                {"response": error_message},
                 status=status.HTTP_400_BAD_REQUEST)
             
 # TODO: add random data
