@@ -266,9 +266,9 @@ def sharedVehicleOwnerDataDeserializer(shared_vehicle_owner_data):
             "profile_pic_url_string": shared_vehicle_owner_data['profile_pic_url_string'],
             "profile_image": shared_vehicle_owner_data['profile_image'],
             "email_verified": shared_vehicle_owner_data['email_verified'],
-            # "full_name": shared_vehicle_owner_data['full_name'],
-            # "address": shared_vehicle_owner_data['address'],
-            # "weight_in_kg": shared_vehicle_owner_data['weight_in_kg'],
+            "full_name": shared_vehicle_owner_data['full_name'],
+            "address": shared_vehicle_owner_data['address'],
+            "weight_in_kg": shared_vehicle_owner_data['weight_in_kg'],
             "user_address": {
                 "latitude": shared_vehicle_owner_data['latitude'],
                 "longitude": shared_vehicle_owner_data['longitude']

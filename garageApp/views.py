@@ -64,8 +64,6 @@ def garage_list(request):
             shared_vehicle_owner_data_fields = get_model_fields(shared_vehicle_owner_data_model)
             shared_vehicle_owner_data_values = shared_vehicle_owner_data_model.objects.filter(garage_id=vehicle_id).values(*shared_vehicle_owner_data_fields).first()
             nested_shared_vehicle_owner_data_values = sharedVehicleOwnerDataDeserializer(shared_vehicle_owner_data_values)
-            print(nested_shared_vehicle_owner_data_values)
-            print(shared_vehicle_owner_data_values)
             garage['shared_vehicle_owner_data'] = nested_shared_vehicle_owner_data_values
             
         # 'safe=False' for objects serialization
@@ -144,7 +142,8 @@ def garage_detail(request, pk):
             vehicle_info_model = VehicleInfo
             vehicle_info_fields = get_model_fields(vehicle_info_model)
             vehicle_info_values = vehicle_info_model.objects.filter(garage_id=vehicle_id).values(*vehicle_info_fields).first()
-            garage['vehicle_info'] = vehicle_info_values
+            nested_vehicle_info_values = vehicleInfoDeserilizer(vehicle_info_values)
+            garage['vehicle_info'] = nested_vehicle_info_values
             
             shared_vehicle_data_model = SharedVehicleData
             shared_vehicle_data_fields = get_model_fields(shared_vehicle_data_model)
@@ -154,7 +153,8 @@ def garage_detail(request, pk):
             shared_vehicle_owner_data_model = SharedVehicleOwnerData
             shared_vehicle_owner_data_fields = get_model_fields(shared_vehicle_owner_data_model)
             shared_vehicle_owner_data_values = shared_vehicle_owner_data_model.objects.filter(garage_id=vehicle_id).values(*shared_vehicle_owner_data_fields).first()
-            garage['shared_vehicle_owner_data'] = shared_vehicle_owner_data_values
+            nested_shared_vehicle_owner_data_values = sharedVehicleOwnerDataDeserializer(shared_vehicle_owner_data_values)
+            garage['shared_vehicle_owner_data'] = nested_shared_vehicle_owner_data_values
             
         # 'safe=False' for objects serialization
         success_message = f"GET Succesful. Found vehicle with Particle ID={pk}."
