@@ -216,44 +216,29 @@ class GarageDeserializer(serializers.ModelSerializer):
             'particle_name',
         ]
         
-class VehicleInfoDeserializer(serializers.Serializer):
-    model = serializers.CharField()
-    type = serializers.CharField()
-    manufacture = serializers.CharField()
-    model_year = serializers.IntegerField()
-    color = serializers.CharField()
-    width=serializers.IntegerField()
-    height=serializers.IntegerField()
-    length=serializers.IntegerField()
-    top_speed = serializers.IntegerField()
-    mileage = serializers.IntegerField()
-    power = serializers.IntegerField()
-    sn = serializers.CharField()
-    motor = serializers.CharField()
-    ecu = serializers.CharField()
-    gsm = serializers.CharField()
-    gps = serializers.CharField()
-
-    def to_representation(self, instance):
-        representation = super().to_representation(instance)
-        dimensions = {
-            'width': representation.pop('width'),
-            'height': representation.pop('height'),
-            'length': representation.pop('length'),
+def vehicleInfoDeserilizer(vehicle_info_values):
+        nested_vehicle_info_values = {
+            "model": vehicle_info_values['model'],
+            "type": vehicle_info_values['type'],
+            "manufacture": vehicle_info_values['manufacture'],
+            "model_year": vehicle_info_values['model_year'],
+            "color": vehicle_info_values['color'],
+            "dimension": {
+                "width": vehicle_info_values['width'],
+                "height": vehicle_info_values['height'],
+                "length": vehicle_info_values['length']
+            },
+            "parameters": {
+                "top_speed": vehicle_info_values['top_speed'],
+                "mileage": vehicle_info_values['mileage'],
+                "power": vehicle_info_values['power']
+            },
+            "configuration": {
+                "sn": vehicle_info_values['sn'],
+                "motor": vehicle_info_values['motor'],
+                "ecu": vehicle_info_values['ecu'],
+                "gsm": vehicle_info_values['gsm'],
+                "gps": vehicle_info_values['gps']
+            }
         }
-        parameters = {
-            'top_speed': representation.pop('top_speed'),
-            'mileage': representation.pop('mileage'),
-            'power': representation.pop('power')
-        }
-        configuration = {
-            'sn': representation.pop('sn'),
-            'motor': representation.pop('motor'),
-            'ecu': representation.pop('ecu'),
-            'gsm': representation.pop('gsm'),
-            'gps': representation.pop('gps')
-        }
-        representation['dimensions'] = dimensions
-        representation['parameters'] = parameters
-        representation['configuration'] = configuration
-        return representation
+        return nested_vehicle_info_values

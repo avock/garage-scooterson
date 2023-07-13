@@ -1,4 +1,5 @@
 from django.shortcuts import render
+import json
 
 from django.http.response import JsonResponse
 from rest_framework.parsers import JSONParser 
@@ -6,7 +7,7 @@ from rest_framework import status
 from django.db import IntegrityError
  
 from garageApp.models import GarageApp, VehicleStatus, VehicleInfo, UserVehicles, SharedVehicleData, SharedVehicleOwnerData
-from garageApp.serializers import GarageSerializer, GarageDeserializer, VehicleStatusSerializer, VehicleInfoSerializer, GarageUpdater, SharedVehicleDataSerializer, SharedVehicleOwnerDataSerializer
+from garageApp.serializers import GarageSerializer, GarageDeserializer, VehicleStatusSerializer, VehicleInfoSerializer, vehicleInfoDeserilizer, GarageUpdater, SharedVehicleDataSerializer, SharedVehicleOwnerDataSerializer
 from rest_framework.decorators import api_view
 
 from datetime import datetime
@@ -51,7 +52,8 @@ def garage_list(request):
             vehicle_info_model = VehicleInfo
             vehicle_info_fields = get_model_fields(vehicle_info_model)
             vehicle_info_values = vehicle_info_model.objects.filter(garage_id=vehicle_id).values(*vehicle_info_fields).first()
-            garage['vehicle_info'] = vehicle_info_values
+            nested_vehicle_info_values = vehicleInfoDeserilizer(vehicle_info_values)
+            garage['vehicle_info'] = nested_vehicle_info_values
             
             shared_vehicle_data_model = SharedVehicleData
             shared_vehicle_data_fields = get_model_fields(shared_vehicle_data_model)
