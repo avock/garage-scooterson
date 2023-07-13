@@ -99,9 +99,41 @@ document.getElementById('add-vehicle').addEventListener('click', function(event)
 
 });
 
-// Event listener for Refresh Vehicle List button
 document.getElementById('refresh-vehicles').addEventListener('click', function() {
     fetchVehicles();    
+});
+
+document.getElementById('update-vehicle').addEventListener('click', function() {
+    const vehicleSelect = document.getElementById('vehicleSelect');
+    const selectedVehicleId = parseInt(vehicleSelect.value);
+
+    // fetching selected vehicle
+    const selectedVehicleData = vehicleArray.find(vehicle => vehicle.vehicle_id === selectedVehicleId)
+    
+    // obtaining user input
+    const newVehicleID = document.getElementById('vehicleID').value;
+    const newVehicleUUID = document.getElementById('vehicleUUID').value;
+    const newVehicleName = document.getElementById('vehicleName').value;
+
+    // updating vehicle_data
+    selectedVehicleData.vehicle_name = newVehicleName;
+    selectedVehicleData.vehicle_id = newVehicleID;
+    selectedVehicleData.vehicle_uuid = newVehicleUUID;
+
+    // Perform POST request to localhost:8000/garage/selectedVehicleId
+    fetch(`http://localhost:8000/garage/${selectedVehicleId}`, {
+        method: 'POST',
+        headers: {
+        'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(selectedVehicleData)
+    })
+        .then(response => response.json())
+        .then(data => {
+        // Handle the response data if needed
+        console.log(data);
+        })
+        .catch(error => console.log(error));
 });
 
 // Event listener for vehicle selection
