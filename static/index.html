@@ -7,23 +7,41 @@
 <body>
     <header>Vehicle Generator</header>
 
-    <form id="form-generate" class="topBefore">
-      <label for="vehicleId">Vehicle ID:</label>
-      <input id="vehicleId" type="text">
-      
-      <label for="ownerId">Owner ID:</label>
-      <input id="ownerId" type="text">
-
-      <input id="add-vehicles" type="submit" value="Add Vehicle">
-      <div id="result" ></div>
-    </form>    
+    <div class="container">
+      <div class="row">
+        <div class="label">Vehicle Name:</div>
+        <input class="input" id="vehicleId" type="text">
+      </div>
+  
+      <div class="row">
+        <div class="label">Owner ID:</div>
+        <input class="input" id="ownerId" type="text">
+      </div>
+  
+      <div class="row">
+        <input id="add-vehicle" value="Add Vehicle" readonly>
+        <div id="result" ></div>  
+      </div>
+    </div>
 
     <header>Vehicle Updater</header>
-    <form id="form-update">
-      <!-- <button onclick="displaySelectedVehicle()">Display Vehicle</button> -->
-      <input id="refresh-vehicles" type="submit" value="Refresh Vehicle List">
-    </form>
-    
+    <div class="container">
+      <div class="row">
+        <div class="label">Vehicle Name:</div>
+        <input class="input" type="text">
+      </div>
+      <div class="row">
+        <div class="label">Vehicle ID:</div>
+        <input class="input" type="text">
+      </div>
+      <div class="row">
+        <div class="label">Vehicle UUID:</div>
+        <input class="input" type="text">
+      </div>
+      <div class="row">
+        <input id="refresh-vehicles" type="submit" value="Refresh Vehicle List">
+      </div>
+    </div>
     <script src="./assets/js/index.js"></script>
 </body>
 </html>

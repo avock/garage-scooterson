@@ -1,4 +1,4 @@
-document.getElementById('form-generate').addEventListener('submit', function(event) {
+document.getElementById('add-vehicle').addEventListener('click', function(event) {
     event.preventDefault();
     var vehicleId = document.getElementById('vehicleId').value;
     var ownerId = document.getElementById('ownerId').value;
@@ -106,7 +106,12 @@ document.getElementById('form-update').addEventListener('submit', function(event
         .then(response => response.json())
         .then(data => {
             vehicle_array = data.vehicles
-
+            // console.log("Vehicle ID: " + vehicle_array[0].vehicle_id)
+            // console.log("Vehicle UUID: " + vehicle_array[0].vehicle_uuid)
+            // console.log("Vehicle Pub Key: " + vehicle_array[0].vehicle_pub_key)
+            // console.log("Vehicle Particle ID: " + vehicle_array[0].particle_id)
+            // console.log("Vehicle Model Type: " + vehicle_array[0].vehicle_info.model)
+            // console.log("Vehicle Color: " + vehicle_array[0].vehicle_info.color)
         })
 
 })
@@ -121,6 +126,6 @@ function refreshVehicleList() {
       option.textContent = "Vehicle ID " + vehicle.vehicle_id;
       vehicleSelector.appendChild(option);
     })
-}
+};
 
 
