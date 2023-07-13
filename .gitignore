@@ -5,3 +5,16 @@ test.json
 .env
 .vercel
 *.pyc
+
+
+
+things to update:
+- veh-name
+- veh-ownerid
+- veh-uuid
+- veh-pubkey
+- vehicleinfo > type
+- vehicleinfo > model
+- vehicleinfo > color
+- lat
+- long

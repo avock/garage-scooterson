@@ -8,6 +8,5 @@ urlpatterns = [
     path('garage', views.garage_list),
     path('user/<str:user_id>/<str:id>', views.user_vehicles),
     path('user/<str:user_id>', views.user),
-    path('create', RedirectView.as_view(url='static/form.html')),
-    path('', views.index, name='index'),
+    path('', RedirectView.as_view(url='static/index.html')),
 ]

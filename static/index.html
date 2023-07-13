@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vehicle Generator</title>
+    <link rel="stylesheet" href="./assets/css/styles.css">
+  </head>
+<body>
+    <header>Vehicle Generator</header>
+
+    <form id="form-generate" class="topBefore">
+      <label for="vehicleId">Vehicle ID:</label>
+      <input id="vehicleId" type="text">
+      
+      <label for="ownerId">Owner ID:</label>
+      <input id="ownerId" type="text">
+
+      <input id="add-vehicles" type="submit" value="Add Vehicle">
+      <div id="result" ></div>
+    </form>    
+
+    <header>Vehicle Updater</header>
+    <form id="form-update">
+      <!-- <button onclick="displaySelectedVehicle()">Display Vehicle</button> -->
+      <input id="refresh-vehicles" type="submit" value="Refresh Vehicle List">
+    </form>
+    
+    <script src="./assets/js/index.js"></script>
+</body>
+</html>
