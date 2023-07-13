@@ -7,7 +7,7 @@ from rest_framework import status
 from django.db import IntegrityError
  
 from garageApp.models import GarageApp, VehicleStatus, VehicleInfo, UserVehicles, SharedVehicleData, SharedVehicleOwnerData
-from garageApp.serializers import GarageSerializer, GarageDeserializer, VehicleStatusSerializer, VehicleInfoSerializer, vehicleInfoDeserilizer, GarageUpdater, SharedVehicleDataSerializer, SharedVehicleOwnerDataSerializer
+from garageApp.serializers import GarageSerializer, GarageDeserializer, VehicleStatusSerializer, VehicleInfoSerializer, vehicleInfoDeserilizer, GarageUpdater, SharedVehicleDataSerializer, SharedVehicleOwnerDataSerializer, sharedVehicleOwnerDataDeserializer
 from rest_framework.decorators import api_view
 
 from datetime import datetime
@@ -63,7 +63,10 @@ def garage_list(request):
             shared_vehicle_owner_data_model = SharedVehicleOwnerData
             shared_vehicle_owner_data_fields = get_model_fields(shared_vehicle_owner_data_model)
             shared_vehicle_owner_data_values = shared_vehicle_owner_data_model.objects.filter(garage_id=vehicle_id).values(*shared_vehicle_owner_data_fields).first()
-            garage['shared_vehicle_owner_data'] = shared_vehicle_owner_data_values
+            nested_shared_vehicle_owner_data_values = sharedVehicleOwnerDataDeserializer(shared_vehicle_owner_data_values)
+            print(nested_shared_vehicle_owner_data_values)
+            print(shared_vehicle_owner_data_values)
+            garage['shared_vehicle_owner_data'] = nested_shared_vehicle_owner_data_values
             
         # 'safe=False' for objects serialization
         count = len(garage_data)

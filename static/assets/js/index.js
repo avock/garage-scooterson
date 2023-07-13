@@ -106,9 +106,7 @@ document.getElementById('form-update').addEventListener('submit', function(event
         .then(response => response.json())
         .then(data => {
             vehicle_array = data.vehicles
-            console.log(vehicle_array[0].vehicle_id)
-            console.log(vehicle_array[1])
-            console.log(vehicle_array[1].shared_vehicle_owner_data.user_address)
+
         })
 
 })

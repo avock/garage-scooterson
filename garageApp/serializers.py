@@ -242,3 +242,33 @@ def vehicleInfoDeserilizer(vehicle_info_values):
             }
         }
         return nested_vehicle_info_values
+    
+def sharedVehicleOwnerDataDeserializer(shared_vehicle_owner_data):
+        nested_shared_vehicle_owner_data = {
+            "address_line1": shared_vehicle_owner_data["address_line1"],
+            "address_line2": shared_vehicle_owner_data['address_line2'],
+            "city": shared_vehicle_owner_data['city'],
+            "state": shared_vehicle_owner_data['state'],
+            "zipcode": shared_vehicle_owner_data['zipcode'],
+            "email": shared_vehicle_owner_data['email'],
+            "mobile_number": shared_vehicle_owner_data['mobile_number'],
+            "name": {
+                "first_name": shared_vehicle_owner_data['first_name'],
+                "last_name": shared_vehicle_owner_data['last_name']
+            },
+            "user_id": shared_vehicle_owner_data['user_id'],
+            "birth_date": shared_vehicle_owner_data['birth_date'],
+            "gender": shared_vehicle_owner_data['gender'],
+            "weight": shared_vehicle_owner_data['weight'],
+            "profile_pic_url_string": shared_vehicle_owner_data['profile_pic_url_string'],
+            "profile_image": shared_vehicle_owner_data['profile_image'],
+            "email_verified": shared_vehicle_owner_data['email_verified'],
+            "user_address": {
+                "latitude": shared_vehicle_owner_data['latitude'],
+                "longitude": shared_vehicle_owner_data['longitude']
+            },
+            # "full_name": shared_vehicle_owner_data['full_name'],
+            # "address": shared_vehicle_owner_data['address'],
+            # "weight_in_kg": shared_vehicle_owner_data['weight_in_kg'],
+        }
+        return nested_shared_vehicle_owner_data
