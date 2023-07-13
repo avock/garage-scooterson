@@ -24,7 +24,6 @@ header {
 
 .row {
   display: flex;
-
   margin-top: 16px;
 }
 
@@ -33,6 +32,12 @@ header {
   flex-basis: 20%;
 
   padding: 15px 0;
+}
+
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
 }
 
 input,
@@ -58,8 +63,17 @@ input:active {
 }
 
 #add-vehicle,
-#refresh-vehicles {
+#refresh-vehicles,
+#update-vehicle {
   text-align: center;
+  margin-top: 56px;
+  background-color: #b3aca7;
+  color: #fff7f0;
+  /* color: #66615d; */
+}
+
+#update-vehicle {
+  margin-top: 16px;
 }
 
 #add-vehicle:hover,

@@ -100,6 +100,7 @@ document.getElementById('add-vehicle').addEventListener('click', function(event)
 });
 
 document.getElementById('refresh-vehicles').addEventListener('click', function() {
+    clearForm();
     fetchVehicles();    
 });
 
@@ -184,8 +185,7 @@ function fetchVehicles() {
   
   // Clear the form fields
   function clearForm() {
-    document.getElementById('vehicleName').textContent = '';
-    document.getElementById('vehicleId').textContent = '';
-    document.getElementById('vehicleUuid').textContent = '';
-    document.getElementById('vehicleSelect').selectedIndex = -1;
+    document.getElementById('vehicleName').value = '';
+    document.getElementById('vehicleID').value = '';
+    document.getElementById('vehicleUUID').value = '';
   }
