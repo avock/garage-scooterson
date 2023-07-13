@@ -10,17 +10,17 @@
     <div class="container">
       <div class="row">
         <div class="label">Vehicle Name:</div>
-        <input class="input" id="vehicleId" type="text">
+        <input class="input" type="text">
       </div>
   
       <div class="row">
         <div class="label">Owner ID:</div>
-        <input class="input" id="ownerId" type="text">
+        <input class="input" type="text">
       </div>
   
       <div class="row">
         <input id="add-vehicle" value="Add Vehicle" readonly>
-        <div id="result" ></div>  
+        <div id="add-result" ></div>  
       </div>
     </div>
 
@@ -28,18 +28,25 @@
     <div class="container">
       <div class="row">
         <div class="label">Vehicle Name:</div>
-        <input class="input" type="text">
+        <input id="vehicleName" class="input" type="text">
       </div>
       <div class="row">
         <div class="label">Vehicle ID:</div>
-        <input class="input" type="text">
+        <input id="vehicleID" class="input" type="text">
       </div>
       <div class="row">
         <div class="label">Vehicle UUID:</div>
-        <input class="input" type="text">
+        <input id="vehicleUUID" class="input" type="text">
+      </div>
+      <div class="row">
+        <div class="label">Choose Vehicle:</div>
+        <select id="vehicleSelect">
+          <option>---refresh list---</option>
+        </select>
       </div>
       <div class="row">
         <input id="refresh-vehicles" type="submit" value="Refresh Vehicle List">
+        <div id="refresh-result" ></div>  
       </div>
     </div>
     <script src="./assets/js/index.js"></script>

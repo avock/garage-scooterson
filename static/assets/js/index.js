@@ -99,33 +99,61 @@ document.getElementById('add-vehicle').addEventListener('click', function(event)
 
 });
 
-document.getElementById('form-update').addEventListener('submit', function(event) {
-    event.preventDefault();
+// Event listener for Refresh Vehicle List button
+document.getElementById('refresh-vehicles').addEventListener('click', function() {
+    fetchVehicles();    
+});
 
+// Event listener for vehicle selection
+document.getElementById('vehicleSelect').addEventListener('change', function() {
+    updateForm();
+});  
+
+// Fetch vehicles from localhost:8000/garage and populate vehicleArray
+function fetchVehicles() {
     fetch('http://localhost:8000/garage')
-        .then(response => response.json())
-        .then(data => {
-            vehicle_array = data.vehicles
-            // console.log("Vehicle ID: " + vehicle_array[0].vehicle_id)
-            // console.log("Vehicle UUID: " + vehicle_array[0].vehicle_uuid)
-            // console.log("Vehicle Pub Key: " + vehicle_array[0].vehicle_pub_key)
-            // console.log("Vehicle Particle ID: " + vehicle_array[0].particle_id)
-            // console.log("Vehicle Model Type: " + vehicle_array[0].vehicle_info.model)
-            // console.log("Vehicle Color: " + vehicle_array[0].vehicle_info.color)
-        })
-
-})
-
-function refreshVehicleList() {
-    var vehicleSelector = document.getElementById("vehicleSelector");
-    vehicleSelector.innerHTML = ""; // Clear existing dropdown options
-
-    vehicles.forEach(vehicle => {
-      var option = document.createElement("option");
+      .then(response => response.json())
+      .then(data => {
+        vehicleArray = data.vehicles;
+        populateVehicleDropdown();
+      })
+      .catch(error => console.log(error));
+  }
+  
+  // Populate the dropdown with vehicle IDs
+  function populateVehicleDropdown() {
+    const vehicleSelect = document.getElementById('vehicleSelect');
+    vehicleSelect.innerHTML = '';
+    const success_message = document.createElement('option')
+    success_message.value = '---refresh success---';
+    success_message.text = '---refresh success---';
+    vehicleSelect.appendChild(success_message);
+    vehicleArray.forEach(vehicle => {
+      const option = document.createElement('option');
       option.value = vehicle.vehicle_id;
-      option.textContent = "Vehicle ID " + vehicle.vehicle_id;
-      vehicleSelector.appendChild(option);
-    })
-};
-
-
+      option.text = vehicle.vehicle_id;
+      vehicleSelect.appendChild(option);
+    });
+  }
+  
+  // Update the form with vehicle details based on the selected vehicle ID
+  function updateForm() {
+    const vehicleSelect = document.getElementById('vehicleSelect');
+    const selectedVehicleId = parseInt(vehicleSelect.value);
+    const selectedVehicle = vehicleArray.find(vehicle => vehicle.vehicle_id === selectedVehicleId);
+    if (selectedVehicle) {
+      document.getElementById('vehicleName').value = selectedVehicle.vehicle_name;
+      document.getElementById('vehicleID').value = selectedVehicle.vehicle_id;
+      document.getElementById('vehicleUUID').value = selectedVehicle.vehicle_uuid;
+    } else {
+      clearForm();
+    }
+  }
+  
+  // Clear the form fields
+  function clearForm() {
+    document.getElementById('vehicleName').textContent = '';
+    document.getElementById('vehicleId').textContent = '';
+    document.getElementById('vehicleUuid').textContent = '';
+    document.getElementById('vehicleSelect').selectedIndex = -1;
+  }
