@@ -188,4 +188,10 @@ function fetchVehicles() {
     document.getElementById('vehicleName').value = '';
     document.getElementById('vehicleID').value = '';
     document.getElementById('vehicleUUID').value = '';
+    const vehicleSelect = document.getElementById('vehicleSelect');
+    vehicleSelect.innerHTML = '';
+    const success_message = document.createElement('option')
+    success_message.value = 'refreshing....';
+    success_message.text = 'refreshing....';
+    vehicleSelect.appendChild(success_message);
   }
