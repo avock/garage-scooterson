@@ -91,11 +91,16 @@ DATABASES = {
     # local database 
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': env('DB_NAME'),
-        'USER': env('DB_USER'),
-        'PASSWORD': env('DB_PASSWORD'),
-        'HOST': env('DB_HOST'),
-        'PORT': env('DB_PORT'),
+        'NAME': 'railway',
+        'USER': 'postgres',
+        'PASSWORD': 'DjdFnPnDBDjkPjkSijb8',
+        'HOST': 'containers-us-west-188.railway.app',
+        'PORT': '7885',
+        # 'NAME': env('DB_NAME'),
+        # 'USER': env('DB_USER'),
+        # 'PASSWORD': env('DB_PASSWORD'),
+        # 'HOST': env('DB_HOST'),
+        # 'PORT': env('DB_PORT'),
     }
     # 'default': {
     #     'ENGINE': 'django.db.backends.sqlite3',
