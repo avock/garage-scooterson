@@ -122,7 +122,8 @@ document.getElementById('update-vehicle').addEventListener('click', function() {
     selectedVehicleData.vehicle_uuid = newVehicleUUID;
 
     // Perform POST request to localhost:8000/garage/selectedVehicleId
-    fetch(`http://localhost:8000/garage/${selectedVehicleId}`, {
+    fetch(`https://garage-scooterson.vercel.app/garage/${selectedVehicleId}`, {
+    // fetch(`http://localhost:8000/garage/${selectedVehicleId}`, {
         method: 'POST',
         headers: {
         'Content-Type': 'application/json'
@@ -144,7 +145,8 @@ document.getElementById('vehicleSelect').addEventListener('change', function() {
 
 // Fetch vehicles from localhost:8000/garage and populate vehicleArray
 function fetchVehicles() {
-    fetch('http://localhost:8000/garage')
+    fetch('https://garage-scooterson.vercel.app/garage')
+    // fetch('http://localhost:8000/garage')
       .then(response => response.json())
       .then(data => {
         vehicleArray = data.vehicles;
