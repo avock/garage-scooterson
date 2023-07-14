@@ -1,3 +1,5 @@
+let vehicleArray = []
+
 document.getElementById('add-vehicle').addEventListener('click', function(event) {
     event.preventDefault();
     var vehicleName = document.getElementById('newVehicleName').value;
@@ -123,39 +125,49 @@ document.getElementById('refresh-vehicles').addEventListener('click', function()
 });
 
 document.getElementById('update-vehicle').addEventListener('click', function() {
-    const vehicleSelect = document.getElementById('vehicleSelect');
-    const selectedVehicleId = parseInt(vehicleSelect.value);
+
     const updateVehicleButton = document.getElementById('update-vehicle')
+    const vehicleSelect = document.getElementById('vehicleSelect');
+    const selectedVehicleId = vehicleSelect.value;
 
-    // fetching selected vehicle
-    const selectedVehicleData = vehicleArray.find(vehicle => vehicle.vehicle_id === selectedVehicleId)
-    
-    // obtaining user input
-    const newVehicleID = document.getElementById('vehicleID').value;
-    const newVehicleUUID = document.getElementById('vehicleUUID').value;
-    const newVehicleName = document.getElementById('vehicleName').value;
+    const updateResponse = document.getElementById('updateVehicleResponse')
 
-    // updating vehicle_data
-    selectedVehicleData.vehicle_name = newVehicleName;
-    selectedVehicleData.vehicle_id = newVehicleID;
-    selectedVehicleData.vehicle_uuid = newVehicleUUID;
+    const selectedVehicleData = vehicleArray.find(vehicle => vehicle.vehicle_id === selectedVehicleId);    // obtaining user input
 
     // Perform POST request to localhost:8000/garage/selectedVehicleId
-    fetch(`https://garage-scooterson.vercel.app/garage/${selectedVehicleId}`, {
-    // fetch(`http://localhost:8000/garage/${selectedVehicleId}`, {
-        method: 'POST',
-        headers: {
-        'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(selectedVehicleData)
-    })
-        .then(response => response.json())
-        .then(data => {
-          console.log(data);
+    displayUpdating()
+    // if vehicle-to-update is selected
+    if (selectedVehicleData) {
+      // target-vehicle is selected, proceed to fetch required data
+      const newVehicleID = document.getElementById('vehicleID').value;
+      const newVehicleUUID = document.getElementById('vehicleUUID').value;
+      const newVehicleName = document.getElementById('vehicleName').value;
+  
+      // updating vehicle_data
+      selectedVehicleData.vehicle_name = newVehicleName;
+      selectedVehicleData.vehicle_id = newVehicleID;
+      selectedVehicleData.vehicle_uuid = newVehicleUUID;
+
+      fetch(`https://garage-scooterson.vercel.app/garage/${selectedVehicleId}`, {
+        // fetch(`http://localhost:8000/garage/${selectedVehicleId}`, {
+            method: 'POST',
+            headers: {
+            'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(selectedVehicleData)
         })
-        .catch(error => {
-          console.log(error)
-        });
+            .then(response => response.json())
+            .then(data => {
+              hideUpdating()
+              
+            })
+            .catch(error => {
+              console.log('test')
+            });
+    } else {
+      hideUpdating()
+      updateResponse.textContent = 'Please select a vehicle to update.'
+    }
 });
 
 // Event listener for vehicle selection
@@ -203,7 +215,6 @@ function fetchVehicles() {
   function updateForm() {
     const vehicleSelect = document.getElementById('vehicleSelect');
     const selectedVehicleId = vehicleSelect.value;
-    console.log(selectedVehicleId)
     const selectedVehicle = vehicleArray.find(vehicle => vehicle.vehicle_id === selectedVehicleId);
     if (selectedVehicle) {
       document.getElementById('vehicleName').value = selectedVehicle.vehicle_name;
@@ -233,6 +244,12 @@ function fetchVehicles() {
     addVehicleButton.textContent = ' '
   }
 
+  function displayUpdating() {
+    const addVehicleButton = document.getElementById('update-vehicle')
+    addVehicleButton.classList.add('button--loading')
+    addVehicleButton.textContent = ' '
+  }
+
   function hideLoading() {
     const refreshVehiclesButton = document.getElementById('refresh-vehicles')
     refreshVehiclesButton.classList.remove('button--loading')
@@ -243,4 +260,10 @@ function fetchVehicles() {
     const addVehicleButton = document.getElementById('add-vehicle')
     addVehicleButton.classList.remove('button--loading')
     addVehicleButton.textContent = 'Add Vehicle'
+  }
+
+  function hideUpdating() {
+    const addVehicleButton = document.getElementById('update-vehicle')
+    addVehicleButton.classList.remove('button--loading')
+    addVehicleButton.textContent = 'Update Vehicle'
   }
