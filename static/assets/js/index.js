@@ -102,11 +102,13 @@ document.getElementById('add-vehicle').addEventListener('click', function(event)
 document.getElementById('refresh-vehicles').addEventListener('click', function() {
     clearForm();
     fetchVehicles();    
+    displayLoading();
 });
 
 document.getElementById('update-vehicle').addEventListener('click', function() {
     const vehicleSelect = document.getElementById('vehicleSelect');
     const selectedVehicleId = parseInt(vehicleSelect.value);
+    const updateVehicleButton = document.getElementById('update-vehicle')
 
     // fetching selected vehicle
     const selectedVehicleData = vehicleArray.find(vehicle => vehicle.vehicle_id === selectedVehicleId)
@@ -132,10 +134,11 @@ document.getElementById('update-vehicle').addEventListener('click', function() {
     })
         .then(response => response.json())
         .then(data => {
-        // Handle the response data if needed
-        console.log(data);
+          console.log(data);
         })
-        .catch(error => console.log(error));
+        .catch(error => {
+          console.log(error)
+        });
 });
 
 // Event listener for vehicle selection
@@ -196,4 +199,14 @@ function fetchVehicles() {
     success_message.value = 'refreshing....';
     success_message.text = 'refreshing....';
     vehicleSelect.appendChild(success_message);
+  }
+
+  function displayLoading() {
+    const loading_ring = document.getElementById('loading-ring')
+    loading_ring.style.display = 'block'
+  }
+
+  function hideLoading() {
+    const loading_ring = document.getElementById('loading-ring')
+    loading_ring.style.display = 'none'
   }
