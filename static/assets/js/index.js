@@ -243,5 +243,5 @@ function fetchVehicles() {
   function hideAdding() {
     const addVehicleButton = document.getElementById('add-vehicle')
     addVehicleButton.classList.remove('button--loading')
-    addVehicleButton.textContent = 'Refresh Vehicle List'
+    addVehicleButton.textContent = 'Add Vehicle'
   }
