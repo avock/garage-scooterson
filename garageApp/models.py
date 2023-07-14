@@ -20,7 +20,7 @@ class GarageApp(models.Model):
 
     def save(self, *args, **kwargs):
         if not self.vehicle_id:
-            last_vehicle = GarageApp.objects.order_by('vehicle_id').first()
+            last_vehicle = GarageApp.objects.order_by('vehicle_id').last()
             if last_vehicle:
                 last_id = last_vehicle.vehicle_id
                 next_id = self.increment_vehicle_id(last_id)

@@ -10,20 +10,6 @@ from garageApp.models import GarageApp, VehicleStatus, VehicleInfo, UserVehicles
 from garageApp.serializers import GarageSerializer, GarageDeserializer, VehicleStatusSerializer, VehicleInfoSerializer, vehicleInfoDeserilizer, GarageUpdater, SharedVehicleDataSerializer, SharedVehicleOwnerDataSerializer, sharedVehicleOwnerDataDeserializer
 from rest_framework.decorators import api_view
 
-from datetime import datetime
-from django.http import HttpResponse
-def index(request):
-        now = datetime.now()
-        html = f'''
-        <html>
-            <body>
-                <h1>Hello from Vercel!</h1>
-                <p>The current time is { now }.</p>
-            </body>
-        </html>
-        '''
-        return HttpResponse(html)
-
 
 @api_view(['GET', 'POST', 'DELETE'])
 def garage_list(request):
@@ -88,11 +74,11 @@ def garage_list(request):
             vehicle_info_serializer = VehicleInfoSerializer(data=vehicle_info_data)
             shared_vehicle_data_serializer = SharedVehicleDataSerializer(data=shared_vehicle_data)
             shared_vehicle_owner_data_serializer = SharedVehicleOwnerDataSerializer(data=shared_vehicle_owner_data)
-            
             if vehicle_status_serializer.is_valid() & vehicle_info_serializer.is_valid() & shared_vehicle_data_serializer.is_valid() & shared_vehicle_owner_data_serializer.is_valid(): 
                 # ONLY save garage_serializer since other sub-serializers are handled within garage_serializer
                 garage_serializer.save()
-                return JsonResponse(garage_serializer.data, status=status.HTTP_201_CREATED)
+                success_message = f"POST Succesful. Vehicle added to the garage."
+                return JsonResponse({"response": success_message}, status=status.HTTP_201_CREATED)
             else:
                 return JsonResponse(vehicle_status_serializer.errors, status=status.HTTP_400_BAD_REQUEST)
         return JsonResponse(garage_serializer.errors, status=status.HTTP_400_BAD_REQUEST)
