@@ -101,8 +101,7 @@ document.getElementById('add-vehicle').addEventListener('click', function(event)
 
 document.getElementById('refresh-vehicles').addEventListener('click', function() {
     clearForm();
-    fetchVehicles();    
-    displayLoading();
+    fetchVehicles();
 });
 
 document.getElementById('update-vehicle').addEventListener('click', function() {
@@ -148,12 +147,14 @@ document.getElementById('vehicleSelect').addEventListener('change', function() {
 
 // Fetch vehicles from localhost:8000/garage and populate vehicleArray
 function fetchVehicles() {
+    displayLoading();
     fetch('https://garage-scooterson.vercel.app/garage')
     // fetch('http://localhost:8000/garage')
       .then(response => response.json())
       .then(data => {
-        vehicleArray = data.vehicles;
-        populateVehicleDropdown();
+        hideLoading()
+        vehicleArray = data.vehicles
+        populateVehicleDropdown()
       })
       .catch(error => console.log(error));
   }
@@ -202,11 +203,13 @@ function fetchVehicles() {
   }
 
   function displayLoading() {
-    const loading_ring = document.getElementById('loading-ring')
-    loading_ring.style.display = 'block'
+    const refreshVehiclesButton = document.getElementById('refresh-vehicles')
+    refreshVehiclesButton.classList.add('button--loading')
+    refreshVehiclesButton.textContent = ' '
   }
 
   function hideLoading() {
-    const loading_ring = document.getElementById('loading-ring')
-    loading_ring.style.display = 'none'
+    const refreshVehiclesButton = document.getElementById('refresh-vehicles')
+    refreshVehiclesButton.classList.remove('button--loading')
+    refreshVehiclesButton.textContent = 'Refresh Vehicle List'
   }

@@ -59,8 +59,7 @@ select {
 input:hover,
 input:active,
 button:hover,
-button:active,
-button:hover {
+button:active {
   border: solid 1px #5b5754 !important;
   color: #5b5754 !important;
 }
@@ -84,6 +83,7 @@ button:hover {
 }
 
 .button {
+  height: 64px;
   width: 100%;
   position: relative;
   padding: 16px;
