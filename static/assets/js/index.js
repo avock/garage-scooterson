@@ -92,14 +92,30 @@ document.getElementById('add-vehicle').addEventListener('click', function(event)
     };
     
     displayAdding();
+    let response_status;
     fetch("https://garage-scooterson.vercel.app/garage", requestOptions)
-        .then(response => response.text())
+        .then(response =>{
+          response_status = response.status
+        })
         .then(result => {
           hideAdding()
-          console.log(result)
-        })
-        .catch(error => console.log('error', error));
+          const addResponse = document.getElementById('addVehicleResponse')
+          console.log(response_status)
+          if (response_status === 400) {
+            addResponse.textContent = 'Vehicle Name and Owner ID must not be left blank.'
 
+          } else if (response_status === 201) {
+            addResponse.textContent = 'Vehicle added succesfully.'
+
+          } else {
+            addResponse.textContent = 'Something went wrong, please refresh.'
+          }
+        })
+        .catch(error => {
+          const addResponse = document.getElementById('addVehicleResponse')
+          // addResponse.textContent = error
+          console.log('error', error)
+        });
 });
 
 document.getElementById('refresh-vehicles').addEventListener('click', function() {
@@ -151,6 +167,8 @@ document.getElementById('vehicleSelect').addEventListener('change', function() {
 // Fetch vehicles from localhost:8000/garage and populate vehicleArray
 function fetchVehicles() {
     displayLoading();
+    const updateResponse = document.getElementById('updateVehicleResponse')
+
     fetch('https://garage-scooterson.vercel.app/garage')
     // fetch('http://localhost:8000/garage')
       .then(response => response.json())
@@ -158,18 +176,22 @@ function fetchVehicles() {
         hideLoading()
         vehicleArray = data.vehicles
         populateVehicleDropdown()
-      })
-      .catch(error => console.log(error));
-  }
+        updateForm()
+        if (vehicleArray) {
+          updateResponse.textContent = data.response
+      
+        } else {
+          updateResponse.textContent = 'Something went wrong, please refresh.'
+        }
+      })        
+      .catch(error => {
+        console.log(error)
+      });
+}
   
   // Populate the dropdown with vehicle IDs
   function populateVehicleDropdown() {
     const vehicleSelect = document.getElementById('vehicleSelect');
-    vehicleSelect.innerHTML = '';
-    const success_message = document.createElement('option')
-    success_message.value = '--refresh success!--';
-    success_message.text = '--refresh success!--';
-    vehicleSelect.appendChild(success_message);
     vehicleArray.forEach(vehicle => {
       const option = document.createElement('option');
       option.value = vehicle.vehicle_id;
@@ -181,7 +203,8 @@ function fetchVehicles() {
   // Update the form with vehicle details based on the selected vehicle ID
   function updateForm() {
     const vehicleSelect = document.getElementById('vehicleSelect');
-    const selectedVehicleId = parseInt(vehicleSelect.value);
+    const selectedVehicleId = vehicleSelect.value;
+    console.log(selectedVehicleId)
     const selectedVehicle = vehicleArray.find(vehicle => vehicle.vehicle_id === selectedVehicleId);
     if (selectedVehicle) {
       document.getElementById('vehicleName').value = selectedVehicle.vehicle_name;

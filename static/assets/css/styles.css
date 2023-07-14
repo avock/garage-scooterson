@@ -41,7 +41,9 @@ select {
 }
 
 input,
-select {
+select,
+#addVehicleResponse,
+#updateVehicleResponse {
   flex: 1;
   flex-basis: 80%;
 
