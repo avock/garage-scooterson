@@ -18,6 +18,9 @@ class GarageApp(models.Model):
     class Meta:
         verbose_name_plural = "Garage"
 
+    def __str__(self):
+        return f"{self.vehicle_name}, vehicle_id:{self.vehicle_id}"
+    
     def save(self, *args, **kwargs):
         if not self.vehicle_id:
             last_vehicle = GarageApp.objects.order_by('vehicle_id').last()
@@ -68,6 +71,9 @@ class VehicleStatus(models.Model):
     class Meta:
         verbose_name_plural = "Vehicle Status"
     
+    def __str__(self):
+        return f"{self.garage}"
+    
 class VehicleInfo(models.Model):
     
     COLOR_CHOICES = [
@@ -117,6 +123,9 @@ class VehicleInfo(models.Model):
     
     class Meta:
         verbose_name_plural = "Vehicle Info"
+
+    def __str__(self):
+        return f"{self.garage}"
     
 class SharedVehicleData(models.Model):
     garage = models.OneToOneField(GarageApp, on_delete=models.CASCADE, primary_key=True, related_name='shared_vehicle_data')
@@ -129,6 +138,9 @@ class SharedVehicleData(models.Model):
     
     class Meta:
         verbose_name_plural = "Shared Vehicle Data"
+    
+    def __str__(self):
+        return f"{self.garage}"
     
 class SharedVehicleOwnerData(models.Model):
     garage = models.OneToOneField(GarageApp, on_delete=models.CASCADE, primary_key=True, related_name='shared_vehicle_owner_data')
@@ -157,6 +169,9 @@ class SharedVehicleOwnerData(models.Model):
     
     class Meta:
         verbose_name_plural = "Shared Vehicle Owner Data"
+        
+    def __str__(self):
+        return f"{self.garage}"
     
 class UserVehicles(models.Model):
     userID = models.IntegerField()
