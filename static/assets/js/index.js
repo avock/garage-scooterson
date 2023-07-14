@@ -1,15 +1,14 @@
 document.getElementById('add-vehicle').addEventListener('click', function(event) {
     event.preventDefault();
-    var vehicleId = document.getElementById('vehicleId').value;
-    var ownerId = document.getElementById('ownerId').value;
+    var vehicleName = document.getElementById('newVehicleName').value;
+    var ownerId = document.getElementById('newOwnerID').value;
 
     var myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
     myHeaders.append("X-API-Key", "{{token}}");
 
     var raw = JSON.stringify({
-        "vehicle_name": "A-Orange",
-        "vehicle_id": vehicleId,
+        "vehicle_name": vehicleName,
         "vehicle_owner_id": ownerId,
         "vehicle_uuid": "0818a87e-1f2a-486b-be0b-a1481a18476d",
         "vehicle_pub_key": "wveFrDR9TsaNSoDdZvh8qYG1GTW/UQpzYtuRXMyhHXk=",
@@ -92,9 +91,13 @@ document.getElementById('add-vehicle').addEventListener('click', function(event)
         body: raw,
     };
     
+    displayAdding();
     fetch("https://garage-scooterson.vercel.app/garage", requestOptions)
         .then(response => response.text())
-        .then(result => console.log(result))
+        .then(result => {
+          hideAdding()
+          console.log(result)
+        })
         .catch(error => console.log('error', error));
 
 });
@@ -202,8 +205,20 @@ function fetchVehicles() {
     refreshVehiclesButton.textContent = ' '
   }
 
+  function displayAdding() {
+    const addVehicleButton = document.getElementById('add-vehicle')
+    addVehicleButton.classList.add('button--loading')
+    addVehicleButton.textContent = ' '
+  }
+
   function hideLoading() {
     const refreshVehiclesButton = document.getElementById('refresh-vehicles')
     refreshVehiclesButton.classList.remove('button--loading')
     refreshVehiclesButton.textContent = 'Refresh Vehicle List'
+  }
+
+  function hideAdding() {
+    const addVehicleButton = document.getElementById('add-vehicle')
+    addVehicleButton.classList.remove('button--loading')
+    addVehicleButton.textContent = 'Refresh Vehicle List'
   }

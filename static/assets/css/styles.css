@@ -96,16 +96,6 @@ button:active {
   font-family: 'Lato', sans-serif;
 }
 
-.button__text {
-  color: #ffffff;
-  transition: all 0.2s;
-}
-
-.button--loading .button__text {
-  visibility: hidden;
-  opacity: 0;
-}
-
 .button--loading::after {
   content: "";
   position: absolute;
