@@ -164,8 +164,8 @@ function fetchVehicles() {
     const vehicleSelect = document.getElementById('vehicleSelect');
     vehicleSelect.innerHTML = '';
     const success_message = document.createElement('option')
-    success_message.value = '---refresh success---';
-    success_message.text = '---refresh success---';
+    success_message.value = '--refresh success!--';
+    success_message.text = '--refresh success!--';
     vehicleSelect.appendChild(success_message);
     vehicleArray.forEach(vehicle => {
       const option = document.createElement('option');
@@ -194,12 +194,6 @@ function fetchVehicles() {
     document.getElementById('vehicleName').value = '';
     document.getElementById('vehicleID').value = '';
     document.getElementById('vehicleUUID').value = '';
-    const vehicleSelect = document.getElementById('vehicleSelect');
-    vehicleSelect.innerHTML = '';
-    const success_message = document.createElement('option')
-    success_message.value = 'refreshing....';
-    success_message.text = 'refreshing....';
-    vehicleSelect.appendChild(success_message);
   }
 
   function displayLoading() {
