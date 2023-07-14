@@ -117,7 +117,6 @@ class GarageSerializer(serializers.ModelSerializer):
         model = GarageApp
         fields = [            
             'vehicle_name',
-            'vehicle_id',
             'vehicle_owner_id',
             'vehicle_uuid',
             'vehicle_pub_key',

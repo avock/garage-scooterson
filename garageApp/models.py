@@ -7,7 +7,7 @@ User = get_user_model
 
 class GarageApp(models.Model):
     vehicle_name = models.CharField(max_length=100)
-    vehicle_id = models.IntegerField(primary_key=True, blank=False, null=False, error_messages={'unique':"This vehicle has already been registered."})
+    vehicle_id = models.CharField(primary_key=True, blank=False, null=False, max_length=100, error_messages={'unique':"This vehicle has already been registered."})
     vehicle_owner_id = models.IntegerField()
     vehicle_uuid = models.CharField(max_length=100)
     vehicle_pub_key = models.CharField(max_length=100)
@@ -17,7 +17,41 @@ class GarageApp(models.Model):
     
     class Meta:
         verbose_name_plural = "Garage"
-    
+
+    def save(self, *args, **kwargs):
+        if not self.vehicle_id:
+            last_vehicle = GarageApp.objects.order_by('vehicle_id').first()
+            if last_vehicle:
+                last_id = last_vehicle.vehicle_id
+                next_id = self.increment_vehicle_id(last_id)
+                self.vehicle_id = next_id
+            else:
+                self.vehicle_id = "0001"
+        super().save(*args, **kwargs)
+
+    def increment_vehicle_id(self, vehicle_id):
+        # Helper method to increment the vehicle ID
+        if vehicle_id == "ZZZZ":
+            return "0001"
+        else:
+            chars = list(vehicle_id)
+            for i in range(len(chars) - 1, -1, -1):
+                if chars[i] != "Z":
+                    chars[i] = self.increment_char(chars[i])
+                    break
+                else:
+                    chars[i] = "0"
+            return "".join(chars)
+
+    def increment_char(self, char):
+        # Helper method to increment a single character
+        if char == "Z":
+            return "0"
+        elif char == "9":
+            return "A"
+        elif char.isdigit():
+            return chr(ord(char) + 1)
+
 class VehicleStatus(models.Model):
     garage = models.OneToOneField(GarageApp ,on_delete=models.CASCADE ,primary_key=True , related_name='vehicle_status')
 
