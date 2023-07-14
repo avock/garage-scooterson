@@ -100,7 +100,6 @@ document.getElementById('add-vehicle').addEventListener('click', function(event)
         .then(result => {
           hideAdding()
           const addResponse = document.getElementById('addVehicleResponse')
-          console.log(response_status)
           if (response_status === 400) {
             addResponse.textContent = 'Vehicle Name and Owner ID must not be left blank.'
 
