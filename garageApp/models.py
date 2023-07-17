@@ -11,8 +11,8 @@ class GarageApp(models.Model):
     vehicle_owner_id = models.IntegerField()
     vehicle_uuid = models.CharField(max_length=100)
     vehicle_pub_key = models.CharField(max_length=100)
-    particle_id = models.CharField(max_length=100)
-    particle_serial = models.CharField(max_length=100)
+    particle_id = models.CharField(max_length=100, unique=True, error_messages={'unique': 'Vehicle with this particle ID already exists'})
+    particle_serial = models.CharField(max_length=100, unique=True, error_messages={'unique': 'Vehicle with this particle serial already exists'})
     particle_name = models.CharField(max_length=100)
     
     class Meta:
