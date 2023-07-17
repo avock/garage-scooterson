@@ -4,6 +4,11 @@ document.getElementById('add-vehicle').addEventListener('click', function(event)
     event.preventDefault();
     var vehicleName = document.getElementById('newVehicleName').value;
     var ownerId = document.getElementById('newOwnerID').value;
+    var particle_id = document.getElementById('newParticleID').value;
+    var particle_serial = document.getElementById('newParticleSerial').value;
+    var particle_name = document.getElementById('newParticleName').value;
+
+    if (!particle_name) particle_name = 'Yogurt'
 
     var myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
@@ -14,9 +19,9 @@ document.getElementById('add-vehicle').addEventListener('click', function(event)
         "vehicle_owner_id": ownerId,
         "vehicle_uuid": "0818a87e-1f2a-486b-be0b-a1481a18476d",
         "vehicle_pub_key": "wveFrDR9TsaNSoDdZvh8qYG1GTW/UQpzYtuRXMyhHXk=",
-        "particle_id": "12345",
-        "particle_serial": "12345",
-        "particle_name": "yogurt",
+        "particle_id": particle_id,
+        "particle_serial": particle_serial,
+        "particle_name": particle_name,
         "shared_vehicle_data": {
             "is_occupied": false,
             "sharing_enabled": true,
