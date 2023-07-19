@@ -108,6 +108,7 @@ document.getElementById('add-vehicle').addEventListener('click', function(event)
         })
         .then(result => {
           hideAdding()
+          clearAddForm
           const addResponse = document.getElementById('addVehicleResponse')
           if (response_status === 400) {
             addResponse.textContent = 'Vehicle Name and Owner ID must not be left blank.'
@@ -127,7 +128,7 @@ document.getElementById('add-vehicle').addEventListener('click', function(event)
 });
 
 document.getElementById('refresh-vehicles').addEventListener('click', function() {
-    clearForm();
+    clearUpdateForm();
     fetchVehicles();
 });
 
@@ -228,15 +229,24 @@ function fetchVehicles() {
       document.getElementById('vehicleID').value = selectedVehicle.vehicle_id;
       document.getElementById('vehicleUUID').value = selectedVehicle.vehicle_uuid;
     } else {
-      clearForm();
+      clearUpdateForm();
     }
   }
   
   // Clear the form fields
-  function clearForm() {
+  function clearUpdateForm() {
     document.getElementById('vehicleName').value = '';
     document.getElementById('vehicleID').value = '';
     document.getElementById('vehicleUUID').value = '';
+  }
+
+  function clearAddForm() {
+    document.getElementById('newVehicleName').value = '';
+    document.getElementById('newVehicleUUID').value = '';
+    document.getElementById('newVehiclePubKey').value = '';
+    document.getElementById('newParticleID').value = '';
+    document.getElementById('newParticleSerial').value = '';
+    document.getElementById('newParticleName').value = '';
   }
 
   function displayLoading() {
