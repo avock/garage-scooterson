@@ -1,0 +1,1490 @@
+A-orange
+{
+"vehicle_name": "A-Orange",
+"vehicle_id": 2001,
+"vehicle_owner_id": 1,
+"vehicle_uuid": "0818a87e-1f2a-486b-be0b-a1481a18476d",
+"vehicle_pub_key": "wveFrDR9TsaNSoDdZvh8qYG1GTW/UQpzYtuRXMyhHXk=",
+"shared_vehicle_data": {
+    "is_ocuupied": false,
+    "sharing_enabled": true,
+    "is_request_pending": false,
+    "idle_time_option": 60,
+    "max_assit_level": 1,
+    "vehicle_owner_profile": {
+    "address_line1": "789 Elm Street",
+    "address_line2": "Unit 12-34",
+    "city": "Singapore",
+    "state": "",
+    "zipcode": "123456",
+    "email": "john.doe@example.com",
+    "mobile_number": "+65 9123 4567",
+    "name": {
+        "first_name": "Deepansh",
+        "last_name": "Jain"
+    },
+    "user_id": 456,
+    "birth_date": "1990-06-15",
+    "gender": "male",
+    "weight": 70,
+    "profile_pic_url_string": "https://i1.sndcdn.com/artworks-000128560053-3cpc8a-t500x500.jpg",
+    "profile_image": null,
+    "email_verified": true,
+    "user_address": {
+        "latitude": "1.3521",
+        "longitude": "103.8198"
+    },
+    "full_name": "Deepansh Jain",
+    "address": "789 Elm Street Unit 12-34",
+    "weight_in_kg": 70
+    }
+},
+"vehicle_info": {
+    "model": "RolleyPlus",
+    "type": "Scooter",
+    "manufacture": "Scooterson",
+    "model_year": 2023,
+    "color": "Orange",
+    "dimension": {
+    "width": 700,
+    "height": 1040,
+    "length": 1620
+    },
+    "parameters": {
+    "top_speed": 30,
+    "mileage": 80,
+    "power": 2
+    },
+    "configuration": {
+    "sn": "2323232121",
+    "motor": "pleasjsak",
+    "ecu": "sds23232232",
+    "gsm": "323242422",
+    "gps": "255:255:255.0"
+    }
+},
+"vehicle_status": {
+    "battery_percentage": 100,
+    "power_on": false,
+    "sharing_on": false,
+    "alarm_on": true,
+    "last_sync": "12:40:31",
+    "is_occupied": false,
+    "odo_meter": 324,
+    "trip_meter": 109,
+    "gear_mode": 16
+}
+},
+Wei-Siang-Rolley
+{
+"vehicle_name": "Wei-Siang-Rolley",
+"vehicle_id": 2778,
+"vehicle_owner_id": 456,
+"vehicle_uuid": "34b8d6ed-5974-45cd-8d5f-7921aa901783",
+"vehicle_pub_key": "Jcg+I2V6xqJ0P4yuRrz7/w2/+j3mUjHs1p7I+l/z2kw=",
+"shared_vehicle_data": {
+    "is_ocuupied": false,
+    "sharing_enabled": true,
+    "is_request_pending": false,
+    "idle_time_option": 60,
+    "max_assit_level": 1,
+    "vehicle_owner_profile": {
+    "address_line1": "789 Elm Street",
+    "address_line2": "Unit 12-34",
+    "city": "Singapore",
+    "state": "",
+    "zipcode": "123456",
+    "email": "john.doe@example.com",
+    "mobile_number": "+65 9123 4567",
+    "name": {
+        "first_name": "Deepansh",
+        "last_name": "Jain"
+    },
+    "user_id": 456,
+    "birth_date": "1990-06-15",
+    "gender": "male",
+    "weight": 70,
+    "profile_pic_url_string": "https://i1.sndcdn.com/artworks-000128560053-3cpc8a-t500x500.jpg",
+    "profile_image": null,
+    "email_verified": true,
+    "user_address": {
+        "latitude": "1.3521",
+        "longitude": "103.8198"
+    },
+    "full_name": "Deepansh Jain",
+    "address": "789 Elm Street Unit 12-34",
+    "weight_in_kg": 70
+    }
+},
+"vehicle_info": {
+    "model": "RolleyPlus",
+    "type": "Scooter",
+    "manufacture": "Scooterson",
+    "model_year": 2023,
+    "color": "Red",
+    "dimension": {
+    "width": 700,
+    "height": 1040,
+    "length": 1620
+    },
+    "parameters": {
+    "top_speed": 30,
+    "mileage": 80,
+    "power": 2
+    },
+    "configuration": {
+    "sn": "2323232121",
+    "motor": "pleasjsak",
+    "ecu": "sds23232232",
+    "gsm": "323242422",
+    "gps": "255:255:255.0"
+    }
+},
+"vehicle_status": {
+    "battery_percentage": 86,
+    "power_on": false,
+    "sharing_on": true,
+    "alarm_on": true,
+    "last_sync": "12:40:31",
+    "is_occupied": false,
+    "odo_meter": 324,
+    "trip_meter": 109,
+    "gear_mode": 16
+}
+},
+A-White-US
+{
+"vehicle_name": "A-White-US",
+"vehicle_id": 2777,
+"vehicle_owner_id": 1,
+"vehicle_uuid": "c36dc3af-d688-4776-9b5b-0ff91d4d58a4",
+"vehicle_pub_key": "rkZJw66xhgCUbmGfjMgQvdTcAwptAmh666PWBYmvPo0=",
+"vehicle_info": {
+    "model": "RolleyPlus",
+    "type": "Scooter",
+    "manufacture": "Scooterson",
+    "model_year": 2023,
+    "color": "White",
+    "dimension": {
+    "width": 700,
+    "height": 1040,
+    "length": 1620
+    },
+    "parameters": {
+    "top_speed": 30,
+    "mileage": 80,
+    "power": 2
+    },
+    "configuration": {
+    "sn": "2323232121",
+    "motor": "pleasjsak",
+    "ecu": "sds23232232",
+    "gsm": "323242422",
+    "gps": "255:255:255.0"
+    }
+},
+"vehicle_status": {
+    "battery_percentage": 86,
+    "power_on": false,
+    "sharing_on": true,
+    "alarm_on": true,
+    "last_sync": "12:40:31",
+    "is_occupied": false,
+    "odo_meter": 324,
+    "trip_meter": 109,
+    "gear_mode": 16
+}
+},
+A-NeonYellow
+{
+"vehicle_name": "A-NeonYellow",
+"vehicle_id": 2002,
+"vehicle_owner_id": 1,
+"vehicle_uuid": "a25d40be-fc78-484e-876a-e7ac555e4a08",
+"vehicle_pub_key": "5DGPduMz36hSvPCfCPBsuGO78LEBdBtLVPhDdoe3xYE=",
+"shared_vehicle_data": {
+    "is_ocuupied": false,
+    "sharing_enabled": true,
+    "is_request_pending": false,
+    "idle_time_option": 60,
+    "max_assit_level": 1,
+    "vehicle_owner_profile": {
+    "address_line1": "789 Elm Street",
+    "address_line2": "Unit 12-34",
+    "city": "Singapore",
+    "state": "",
+    "zipcode": "123456",
+    "email": "john.doe@example.com",
+    "mobile_number": "+65 9123 4567",
+    "name": {
+        "first_name": "Deepansh",
+        "last_name": "Jain"
+    },
+    "user_id": 456,
+    "birth_date": "1990-06-15",
+    "gender": "male",
+    "weight": 70,
+    "profile_pic_url_string": "https://i1.sndcdn.com/artworks-000128560053-3cpc8a-t500x500.jpg",
+    "profile_image": null,
+    "email_verified": true,
+    "user_address": {
+        "latitude": "1.3521",
+        "longitude": "103.8198"
+    },
+    "full_name": "Deepansh Jain",
+    "address": "789 Elm Street Unit 12-34",
+    "weight_in_kg": 70
+    }
+},
+"vehicle_info": {
+    "model": "RolleyPlus",
+    "type": "Scooter",
+    "manufacture": "Scooterson",
+    "model_year": 2023,
+    "color": "NeonYellow",
+    "dimension": {
+    "width": 700,
+    "height": 1040,
+    "length": 1620
+    },
+    "parameters": {
+    "top_speed": 30,
+    "mileage": 80,
+    "power": 2
+    },
+    "configuration": {
+    "sn": "2323232121",
+    "motor": "pleasjsak",
+    "ecu": "sds23232232",
+    "gsm": "323242422",
+    "gps": "255:255:255.0"
+    }
+},
+"vehicle_status": {
+    "battery_percentage": 86,
+    "power_on": false,
+    "sharing_on": true,
+    "alarm_on": true,
+    "last_sync": "12:40:31",
+    "is_occupied": false,
+    "odo_meter": 324,
+    "trip_meter": 109,
+    "gear_mode": 16
+}
+},
+A-Purple
+{
+"vehicle_name": "A-Purple",
+"vehicle_id": 2003,
+"vehicle_owner_id": 1,
+"vehicle_uuid": "13ff8c9b-ed45-4610-a636-63783345f904",
+"vehicle_pub_key": "0M7i+BpP7jBdgahd/Y3GHlOdlJjW6XYlecDQtpOMcr8=",
+"vehicle_info": {
+    "model": "RolleyPlus",
+    "type": "Scooter",
+    "manufacture": "Scooterson",
+    "model_year": 2023,
+    "color": "Purple",
+    "dimension": {
+    "width": 700,
+    "height": 1040,
+    "length": 1620
+    },
+    "parameters": {
+    "top_speed": 30,
+    "mileage": 80,
+    "power": 2
+    },
+    "configuration": {
+    "sn": "2323232121",
+    "motor": "pleasjsak",
+    "ecu": "sds23232232",
+    "gsm": "323242422",
+    "gps": "255:255:255.0"
+    }
+},
+"vehicle_status": {
+    "battery_percentage": 86,
+    "power_on": false,
+    "sharing_on": true,
+    "alarm_on": true,
+    "last_sync": "12:40:31",
+    "is_occupied": false,
+    "odo_meter": 324,
+    "trip_meter": 109,
+    "gear_mode": 16
+}
+},
+A-White
+{
+"vehicle_name": "A-White",
+"vehicle_id": 2004,
+"vehicle_owner_id": 1,
+"vehicle_uuid": "089be6d3-b70f-4479-abe6-b2d0776400e3",
+"vehicle_pub_key": "XF+rNKWT7F+JuixV7VbhYWBkJYFSUwHzwKmcsLI4JGk=",
+"vehicle_info": {
+    "model": "RolleyPlus",
+    "type": "Scooter",
+    "manufacture": "Scooterson",
+    "model_year": 2023,
+    "color": "White",
+    "dimension": {
+    "width": 700,
+    "height": 1040,
+    "length": 1620
+    },
+    "parameters": {
+    "top_speed": 30,
+    "mileage": 80,
+    "power": 2
+    },
+    "configuration": {
+    "sn": "2323232121",
+    "motor": "pleasjsak",
+    "ecu": "sds23232232",
+    "gsm": "323242422",
+    "gps": "255:255:255.0"
+    }
+},
+"vehicle_status": {
+    "battery_percentage": 86,
+    "power_on": false,
+    "sharing_on": true,
+    "alarm_on": true,
+    "last_sync": "12:40:31",
+    "is_occupied": false,
+    "odo_meter": 324,
+    "trip_meter": 109,
+    "gear_mode": 16
+}
+},
+A-Cyan
+{
+"vehicle_name": "A-CYAN",
+"vehicle_id": 1001,
+"vehicle_owner_id": 1,
+"vehicle_uuid": "4a232b40-92cd-408f-b6c6-4e4fe87259d1",
+"vehicle_pub_key": "vhzDWChd6KrwAlQrv1JvIH0RW49gFlOZkt7EYC/TjXM=",
+"vehicle_info": {
+    "model": "RolleyPlus",
+    "type": "Scooter",
+    "manufacture": "Scooterson",
+    "model_year": 2023,
+    "color": "Cyan",
+    "dimension": {
+    "width": 700,
+    "height": 1040,
+    "length": 1620
+    },
+    "parameters": {
+    "top_speed": 30,
+    "mileage": 80,
+    "power": 2
+    },
+    "configuration": {
+    "sn": "2323232121",
+    "motor": "pleasjsak",
+    "ecu": "sds23232232",
+    "gsm": "323242422",
+    "gps": "255:255:255.0"
+    }
+},
+"vehicle_status": {
+    "battery_percentage": 86,
+    "power_on": false,
+    "sharing_on": true,
+    "alarm_on": true,
+    "last_sync": "12:40:31",
+    "is_occupied": false,
+    "odo_meter": 324,
+    "trip_meter": 109,
+    "gear_mode": 16
+}
+},
+Latte
+{
+"vehicle_name": "Latte",
+"vehicle_id": 1002,
+"vehicle_owner_id": 456,
+"vehicle_uuid": "4c5c14a3-5294-4e87-be64-77f1bd95999d",
+"vehicle_pub_key": "WgZcNB5yBjqKFCi40Y4kgIELZKgIpC4zUuaRpCJrUR8=",
+"shared_vehicle_data": {
+    "is_ocuupied": true,
+    "sharing_enabled": true,
+    "is_request_pending": false,
+    "idle_time_option": 60,
+    "max_assit_level": 3,
+    "vehicle_owner_profile": {
+    "address_line1": "789 Elm Street",
+    "address_line2": "Unit 12-34",
+    "city": "Singapore",
+    "state": "",
+    "zipcode": "123456",
+    "email": "john.doe@example.com",
+    "mobile_number": "+65 9123 4567",
+    "name": {
+        "first_name": "Deepansh",
+        "last_name": "Jain"
+    },
+    "user_id": 456,
+    "birth_date": "1990-06-15",
+    "gender": "male",
+    "weight": 70,
+    "profile_pic_url_string": "https://i1.sndcdn.com/artworks-000128560053-3cpc8a-t500x500.jpg",
+    "profile_image": null,
+    "email_verified": true,
+    "user_address": {
+        "latitude": "1.3521",
+        "longitude": "103.8198"
+    },
+    "full_name": "Deepansh Jain",
+    "address": "789 Elm Street Unit 12-34",
+    "weight_in_kg": 70
+    }
+},
+"vehicle_info": {
+    "model": "RolleyPlus",
+    "type": "Scooter",
+    "manufacture": "Scooterson",
+    "model_year": 2023,
+    "color": "White",
+    "dimension": {
+    "width": 700,
+    "height": 1040,
+    "length": 1620
+    },
+    "parameters": {
+    "top_speed": 30,
+    "mileage": 80,
+    "power": 2
+    },
+    "configuration": {
+    "sn": "2323232121",
+    "motor": "pleasjsak",
+    "ecu": "sds23232232",
+    "gsm": "323242422",
+    "gps": "255:255:255.0"
+    }
+},
+"vehicle_status": {
+    "battery_percentage": 86,
+    "power_on": false,
+    "sharing_on": true,
+    "alarm_on": true,
+    "last_sync": "12:40:31",
+    "is_occupied": true,
+    "odo_meter": 324,
+    "trip_meter": 109,
+    "gear_mode": 16
+}
+},
+Americano
+{
+"vehicle_name": "Americano",
+"vehicle_id": 1003,
+"vehicle_owner_id": 1,
+"vehicle_uuid": "4f4c2570-536a-4f7d-a913-1cfaf9a7b5e7",
+"vehicle_pub_key": "bFvDohIf2yXUX0QVrLUYTpV1u+pniDcknUxaPyjHzhI=",
+"vehicle_info": {
+    "model": "Icon",
+    "type": "Golf Cart",
+    "manufacture": "Scooterson",
+    "model_year": 2023,
+    "color": "Green",
+    "dimension": {
+    "width": 700,
+    "height": 1040,
+    "length": 1620
+    },
+    "parameters": {
+    "top_speed": 30,
+    "mileage": 80,
+    "power": 2
+    },
+    "configuration": {
+    "sn": "2323232121",
+    "motor": "pleasjsak",
+    "ecu": "sds23232232",
+    "gsm": "323242422",
+    "gps": "255:255:255.0"
+    }
+},
+"vehicle_status": {
+    "battery_percentage": 86,
+    "power_on": false,
+    "sharing_on": true,
+    "alarm_on": true,
+    "last_sync": "12:40:31",
+    "is_occupied": true,
+    "odo_meter": 324,
+    "trip_meter": 109,
+    "gear_mode": 16
+}
+},
+Cappuccino
+{
+"vehicle_name": "Cappuccino",
+"vehicle_id": 1005,
+"vehicle_owner_id": 456,
+"vehicle_uuid": "989a0d6a-3c60-4564-b6b0-63fd78fc779c",
+"vehicle_pub_key": "i2RqB17pYWqkcTgiZSA9Ym6zXn1k92pP/UuqE2fRh94=",
+"shared_vehicle_data": {
+    "is_ocuupied": false,
+    "sharing_enabled": false,
+    "is_request_pending": false,
+    "idle_time_option": 60,
+    "max_assit_level": 1,
+    "vehicle_owner_profile": {
+    "address_line1": "789 Elm Street",
+    "address_line2": "Unit 12-34",
+    "city": "Singapore",
+    "state": "",
+    "zipcode": "123456",
+    "email": "john.doe@example.com",
+    "mobile_number": "+65 9123 4567",
+    "name": {
+        "first_name": "Deepansh",
+        "last_name": "Jain"
+    },
+    "user_id": 456,
+    "birth_date": "1990-06-15",
+    "gender": "male",
+    "weight": 70,
+    "profile_pic_url_string": "https://i1.sndcdn.com/artworks-000128560053-3cpc8a-t500x500.jpg",
+    "profile_image": null,
+    "email_verified": true,
+    "user_address": {
+        "latitude": "1.3521",
+        "longitude": "103.8198"
+    },
+    "full_name": "Deepansh Jain",
+    "address": "789 Elm Street Unit 12-34",
+    "weight_in_kg": 70
+    }
+},
+"vehicle_info": {
+    "model": "RolleyPlus",
+    "type": "Scooter",
+    "manufacture": "Scooterson",
+    "model_year": 2023,
+    "color": "White",
+    "dimension": {
+    "width": 700,
+    "height": 1040,
+    "length": 1620
+    },
+    "parameters": {
+    "top_speed": 30,
+    "mileage": 80,
+    "power": 2
+    },
+    "configuration": {
+    "sn": "2323232121",
+    "motor": "pleasjsak",
+    "ecu": "sds23232232",
+    "gsm": "323242422",
+    "gps": "255:255:255.0"
+    }
+},
+"vehicle_status": {
+    "battery_percentage": 86,
+    "power_on": false,
+    "sharing_on": true,
+    "alarm_on": true,
+    "last_sync": "12:40:31",
+    "is_occupied": true,
+    "odo_meter": 324,
+    "trip_meter": 109,
+    "gear_mode": 16
+}
+},
+CoffeeMix
+{
+"vehicle_name": "CoffeeMix",
+"vehicle_id": 1005,
+"vehicle_owner_id": 456,
+"vehicle_uuid": "6b96f5ac-3d55-4e91-9c18-7bafa20b0abf",
+"vehicle_pub_key": "kLLcfKsrRlYD9ulzwX5oRl0BKLMSE8qYPikkRpUhsHg=",
+"shared_vehicle_data": {
+    "is_ocuupied": false,
+    "sharing_enabled": false,
+    "is_request_pending": true,
+    "idle_time_option": 60,
+    "max_assit_level": 1,
+    "vehicle_owner_profile": {
+    "address_line1": "789 Elm Street",
+    "address_line2": "Unit 12-34",
+    "city": "Singapore",
+    "state": "",
+    "zipcode": "123456",
+    "email": "john.doe@example.com",
+    "mobile_number": "+65 9123 4567",
+    "name": {
+        "first_name": "Deepansh",
+        "last_name": "Jain"
+    },
+    "user_id": 456,
+    "birth_date": "1990-06-15",
+    "gender": "male",
+    "weight": 70,
+    "profile_pic_url_string": "https://i1.sndcdn.com/artworks-000128560053-3cpc8a-t500x500.jpg",
+    "profile_image": null,
+    "email_verified": true,
+    "user_address": {
+        "latitude": "1.3521",
+        "longitude": "103.8198"
+    },
+    "full_name": "Deepansh Jain",
+    "address": "789 Elm Street Unit 12-34",
+    "weight_in_kg": 70
+    }
+},
+"vehicle_info": {
+    "model": "RolleyPlus",
+    "type": "Scooter",
+    "manufacture": "Scooterson",
+    "model_year": 2023,
+    "color": "White",
+    "dimension": {
+    "width": 700,
+    "height": 1040,
+    "length": 1620
+    },
+    "parameters": {
+    "top_speed": 30,
+    "mileage": 80,
+    "power": 2
+    },
+    "configuration": {
+    "sn": "2323232121",
+    "motor": "pleasjsak",
+    "ecu": "sds23232232",
+    "gsm": "323242422",
+    "gps": "255:255:255.0"
+    }
+},
+"vehicle_status": {
+    "battery_percentage": 86,
+    "power_on": false,
+    "sharing_on": true,
+    "alarm_on": true,
+    "last_sync": "12:40:31",
+    "is_occupied": true,
+    "odo_meter": 324,
+    "trip_meter": 109,
+    "gear_mode": 16
+}
+},
+Wei IconX
+{
+"vehicle_name": "Wei IconX",
+"vehicle_id": 1023,
+"vehicle_owner_id": 456,
+"vehicle_uuid": "7389fb56-c262-4ba7-87a3-5f34c59fc9da",
+"vehicle_pub_key": "PXViKQ06bS1BRwQq3rGSGll+Muj1sBTl7bMgp8AJ/C8=",
+"shared_vehicle_data": {
+    "is_ocuupied": false,
+    "sharing_enabled": true,
+    "is_request_pending": false,
+    "idle_time_option": 60,
+    "max_assit_level": 1,
+    "vehicle_owner_profile": {
+    "address_line1": "789 Elm Street",
+    "address_line2": "Unit 12-34",
+    "city": "Singapore",
+    "state": "",
+    "zipcode": "123456",
+    "email": "john.doe@example.com",
+    "mobile_number": "+65 9123 4567",
+    "name": {
+        "first_name": "Deepansh",
+        "last_name": "Jain"
+    },
+    "user_id": 456,
+    "birth_date": "1990-06-15",
+    "gender": "male",
+    "weight": 70,
+    "profile_pic_url_string": "https://i1.sndcdn.com/artworks-000128560053-3cpc8a-t500x500.jpg",
+    "profile_image": null,
+    "email_verified": true,
+    "user_address": {
+        "latitude": "1.3521",
+        "longitude": "103.8198"
+    },
+    "full_name": "Deepansh Jain",
+    "address": "789 Elm Street Unit 12-34",
+    "weight_in_kg": 70
+    }
+},
+"vehicle_info": {
+    "model": "Icon",
+    "type": "Golf Cart",
+    "manufacture": "Scooterson",
+    "model_year": 2023,
+    "color": "Red",
+    "dimension": {
+    "width": 700,
+    "height": 1040,
+    "length": 1620
+    },
+    "parameters": {
+    "top_speed": 30,
+    "mileage": 80,
+    "power": 2
+    },
+    "configuration": {
+    "sn": "2323232121",
+    "motor": "pleasjsak",
+    "ecu": "sds23232232",
+    "gsm": "323242422",
+    "gps": "255:255:255.0"
+    }
+},
+"vehicle_status": {
+    "battery_percentage": 86,
+    "power_on": false,
+    "sharing_on": true,
+    "alarm_on": true,
+    "last_sync": "12:40:31",
+    "is_occupied": true,
+    "odo_meter": 324,
+    "trip_meter": 109,
+    "gear_mode": 16
+}
+},
+Blk77 IconX
+{
+"vehicle_name": "Blk77 IconX",
+"vehicle_id": 1034,
+"vehicle_owner_id": 1,
+"vehicle_uuid": "7128d3ba-fd3d-4f5f-8c53-ea3e1b3efd1d",
+"vehicle_pub_key": "QWw9FdlTHdFift5ThUByxBDezh8ZsT+X6lOSw1+Lp/8=",
+"vehicle_info": {
+    "model": "Icon",
+    "type": "Golf Cart",
+    "manufacture": "Scooterson",
+    "model_year": 2023,
+    "color": "Red",
+    "dimension": {
+    "width": 700,
+    "height": 1040,
+    "length": 1620
+    },
+    "parameters": {
+    "top_speed": 30,
+    "mileage": 80,
+    "power": 2
+    },
+    "configuration": {
+    "sn": "2323232121",
+    "motor": "pleasjsak",
+    "ecu": "sds23232232",
+    "gsm": "323242422",
+    "gps": "255:255:255.0"
+    }
+},
+"vehicle_status": {
+    "battery_percentage": 86,
+    "power_on": false,
+    "sharing_on": true,
+    "alarm_on": true,
+    "last_sync": "12:40:31",
+    "is_occupied": true,
+    "odo_meter": 324,
+    "trip_meter": 109,
+    "gear_mode": 16
+}
+},
+Dobby IconX
+{
+"vehicle_name": "Dobby IconX",
+"vehicle_id": 1039,
+"vehicle_owner_id": 456,
+"vehicle_uuid": "9d0e647c-d487-4c6a-acd5-e601f0013947",
+"vehicle_pub_key": "Qhq+5KCOCxkB4OTZnVPRAbXnhCk5RJALLwA5U52DP8Y=",
+"shared_vehicle_data": {
+    "is_ocuupied": false,
+    "sharing_enabled": true,
+    "is_request_pending": false,
+    "idle_time_option": 60,
+    "max_assit_level": 1,
+    "vehicle_owner_profile": {
+    "address_line1": "789 Elm Street",
+    "address_line2": "Unit 12-34",
+    "city": "Singapore",
+    "state": "",
+    "zipcode": "123456",
+    "email": "john.doe@example.com",
+    "mobile_number": "+65 9123 4567",
+    "name": {
+        "first_name": "Deepansh",
+        "last_name": "Jain"
+    },
+    "user_id": 456,
+    "birth_date": "1990-06-15",
+    "gender": "male",
+    "weight": 70,
+    "profile_pic_url_string": "https://i1.sndcdn.com/artworks-000128560053-3cpc8a-t500x500.jpg",
+    "profile_image": null,
+    "email_verified": true,
+    "user_address": {
+        "latitude": "1.3521",
+        "longitude": "103.8198"
+    },
+    "full_name": "Deepansh Jain",
+    "address": "789 Elm Street Unit 12-34",
+    "weight_in_kg": 70
+    }
+},
+"vehicle_info": {
+    "model": "Icon",
+    "type": "Golf Cart",
+    "manufacture": "Scooterson",
+    "model_year": 2023,
+    "color": "Purple",
+    "dimension": {
+    "width": 700,
+    "height": 1040,
+    "length": 1620
+    },
+    "parameters": {
+    "top_speed": 30,
+    "mileage": 80,
+    "power": 2
+    },
+    "configuration": {
+    "sn": "2323232121",
+    "motor": "pleasjsak",
+    "ecu": "sds23232232",
+    "gsm": "323242422",
+    "gps": "255:255:255.0"
+    }
+},
+"vehicle_status": {
+    "battery_percentage": 86,
+    "power_on": false,
+    "sharing_on": true,
+    "alarm_on": true,
+    "last_sync": "12:40:31",
+    "is_occupied": true,
+    "odo_meter": 324,
+    "trip_meter": 109,
+    "gear_mode": 16
+}
+},
+Cyan-US
+{
+"vehicle_name": "Cyan-US",
+"vehicle_id": 5001,
+"vehicle_owner_id": 1,
+"vehicle_uuid": "98172f63-bde7-48ca-9e17-c0833156a3ef",
+"vehicle_pub_key": "iAEMk6U8QSqqGzq0GNjnNPoLMinQvpERXhRYomwrTRM=",
+"shared_vehicle_data": {
+    "is_ocuupied": false,
+    "sharing_enabled": true,
+    "is_request_pending": false,
+    "idle_time_option": 60,
+    "max_assit_level": 1,
+    "vehicle_owner_profile": {
+    "address_line1": "789 Elm Street",
+    "address_line2": "Unit 12-34",
+    "city": "Singapore",
+    "state": "",
+    "zipcode": "123456",
+    "email": "john.doe@example.com",
+    "mobile_number": "+65 9123 4567",
+    "name": {
+        "first_name": "Deepansh",
+        "last_name": "Jain"
+    },
+    "user_id": 456,
+    "birth_date": "1990-06-15",
+    "gender": "male",
+    "weight": 70,
+    "profile_pic_url_string": "https://i1.sndcdn.com/artworks-000128560053-3cpc8a-t500x500.jpg",
+    "profile_image": null,
+    "email_verified": true,
+    "user_address": {
+        "latitude": "1.3521",
+        "longitude": "103.8198"
+    },
+    "full_name": "Deepansh Jain",
+    "address": "789 Elm Street Unit 12-34",
+    "weight_in_kg": 70
+    }
+},
+"vehicle_info": {
+    "model": "RolleyPlus",
+    "type": "Scooter",
+    "manufacture": "Scooterson",
+    "model_year": 2023,
+    "color": "Cyan",
+    "dimension": {
+    "width": 700,
+    "height": 1040,
+    "length": 1620
+    },
+    "parameters": {
+    "top_speed": 30,
+    "mileage": 80,
+    "power": 2
+    },
+    "configuration": {
+    "sn": "2323232121",
+    "motor": "pleasjsak",
+    "ecu": "sds23232232",
+    "gsm": "323242422",
+    "gps": "255:255:255.0"
+    }
+},
+"vehicle_status": {
+    "battery_percentage": 100,
+    "power_on": false,
+    "sharing_on": false,
+    "alarm_on": true,
+    "last_sync": "12:40:31",
+    "is_occupied": false,
+    "odo_meter": 324,
+    "trip_meter": 109,
+    "gear_mode": 16
+}
+},
+White-US
+{
+"vehicle_name": "White-US",
+"vehicle_id": 5002,
+"vehicle_owner_id": 1,
+"vehicle_uuid": "c36dc3af-d688-4776-9b5b-0ff91d4d58a4",
+"vehicle_pub_key": "rkZJw66xhgCUbmGfjMgQvdTcAwptAmh666PWBYmvPo0=",
+"shared_vehicle_data": {
+    "is_ocuupied": false,
+    "sharing_enabled": true,
+    "is_request_pending": false,
+    "idle_time_option": 60,
+    "max_assit_level": 1,
+    "vehicle_owner_profile": {
+    "address_line1": "789 Elm Street",
+    "address_line2": "Unit 12-34",
+    "city": "Singapore",
+    "state": "",
+    "zipcode": "123456",
+    "email": "john.doe@example.com",
+    "mobile_number": "+65 9123 4567",
+    "name": {
+        "first_name": "Deepansh",
+        "last_name": "Jain"
+    },
+    "user_id": 456,
+    "birth_date": "1990-06-15",
+    "gender": "male",
+    "weight": 70,
+    "profile_pic_url_string": "https://i1.sndcdn.com/artworks-000128560053-3cpc8a-t500x500.jpg",
+    "profile_image": null,
+    "email_verified": true,
+    "user_address": {
+        "latitude": "1.3521",
+        "longitude": "103.8198"
+    },
+    "full_name": "Deepansh Jain",
+    "address": "789 Elm Street Unit 12-34",
+    "weight_in_kg": 70
+    }
+},
+"vehicle_info": {
+    "model": "RolleyPlus",
+    "type": "Scooter",
+    "manufacture": "Scooterson",
+    "model_year": 2023,
+    "color": "White",
+    "dimension": {
+    "width": 700,
+    "height": 1040,
+    "length": 1620
+    },
+    "parameters": {
+    "top_speed": 30,
+    "mileage": 80,
+    "power": 2
+    },
+    "configuration": {
+    "sn": "2323232121",
+    "motor": "pleasjsak",
+    "ecu": "sds23232232",
+    "gsm": "323242422",
+    "gps": "255:255:255.0"
+    }
+},
+"vehicle_status": {
+    "battery_percentage": 100,
+    "power_on": false,
+    "sharing_on": false,
+    "alarm_on": true,
+    "last_sync": "12:40:31",
+    "is_occupied": false,
+    "odo_meter": 324,
+    "trip_meter": 109,
+    "gear_mode": 16
+}
+},
+Purple-US
+{
+"vehicle_name": "Purple-US",
+"vehicle_id": 5003,
+"vehicle_owner_id": 1,
+"vehicle_uuid": "098caf08-8199-4415-a660-df368dc8c83e",
+"vehicle_pub_key": "nQjS6YP620TGg+Ntsiblum+r2z3fLustuosxDkfbD18=",
+"shared_vehicle_data": {
+    "is_ocuupied": false,
+    "sharing_enabled": true,
+    "is_request_pending": false,
+    "idle_time_option": 60,
+    "max_assit_level": 1,
+    "vehicle_owner_profile": {
+    "address_line1": "789 Elm Street",
+    "address_line2": "Unit 12-34",
+    "city": "Singapore",
+    "state": "",
+    "zipcode": "123456",
+    "email": "john.doe@example.com",
+    "mobile_number": "+65 9123 4567",
+    "name": {
+        "first_name": "Deepansh",
+        "last_name": "Jain"
+    },
+    "user_id": 456,
+    "birth_date": "1990-06-15",
+    "gender": "male",
+    "weight": 70,
+    "profile_pic_url_string": "https://i1.sndcdn.com/artworks-000128560053-3cpc8a-t500x500.jpg",
+    "profile_image": null,
+    "email_verified": true,
+    "user_address": {
+        "latitude": "1.3521",
+        "longitude": "103.8198"
+    },
+    "full_name": "Deepansh Jain",
+    "address": "789 Elm Street Unit 12-34",
+    "weight_in_kg": 70
+    }
+},
+"vehicle_info": {
+    "model": "RolleyPlus",
+    "type": "Scooter",
+    "manufacture": "Scooterson",
+    "model_year": 2023,
+    "color": "Purple",
+    "dimension": {
+    "width": 700,
+    "height": 1040,
+    "length": 1620
+    },
+    "parameters": {
+    "top_speed": 30,
+    "mileage": 80,
+    "power": 2
+    },
+    "configuration": {
+    "sn": "2323232121",
+    "motor": "pleasjsak",
+    "ecu": "sds23232232",
+    "gsm": "323242422",
+    "gps": "255:255:255.0"
+    }
+},
+"vehicle_status": {
+    "battery_percentage": 100,
+    "power_on": false,
+    "sharing_on": false,
+    "alarm_on": true,
+    "last_sync": "12:40:31",
+    "is_occupied": false,
+    "odo_meter": 324,
+    "trip_meter": 109,
+    "gear_mode": 16
+}
+},
+Icon1.5_US
+{
+"vehicle_name": "Icon1.5_US",
+"vehicle_id": 5101,
+"vehicle_owner_id": 1,
+"vehicle_uuid": "9d34dfd6-22c7-446b-8aa2-c8819a708f19",
+"vehicle_pub_key": "E6KyyyIM4R58PtTJ4cndzIMt5NRA4T+fyMoziPIFRv0=",
+"shared_vehicle_data": {
+    "is_ocuupied": false,
+    "sharing_enabled": true,
+    "is_request_pending": false,
+    "idle_time_option": 60,
+    "max_assit_level": 1,
+    "vehicle_owner_profile": {
+    "address_line1": "789 Elm Street",
+    "address_line2": "Unit 12-34",
+    "city": "United States",
+    "state": "",
+    "zipcode": "123456",
+    "email": "john.doe@example.com",
+    "mobile_number": "+65 9123 4567",
+    "name": {
+        "first_name": "Deepansh",
+        "last_name": "Jain"
+    },
+    "user_id": 456,
+    "birth_date": "1990-06-15",
+    "gender": "male",
+    "weight": 70,
+    "profile_pic_url_string": "https://i1.sndcdn.com/artworks-000128560053-3cpc8a-t500x500.jpg",
+    "profile_image": null,
+    "email_verified": true,
+    "user_address": {
+        "latitude": "1.3521",
+        "longitude": "103.8198"
+    },
+    "full_name": "Deepansh Jain",
+    "address": "789 Elm Street Unit 12-34",
+    "weight_in_kg": 70
+    }
+},
+"vehicle_info": {
+    "model": "Icon",
+    "type": "Golf Cart",
+    "manufacture": "IconEv",
+    "model_year": 2023,
+    "color": "Red",
+    "dimension": {
+    "width": 700,
+    "height": 1040,
+    "length": 1620
+    },
+    "parameters": {
+    "top_speed": 25,
+    "mileage": 80,
+    "power": 2
+    },
+    "configuration": {
+    "sn": "2323232121",
+    "motor": "pleasjsak",
+    "ecu": "sds23232232",
+    "gsm": "323242422",
+    "gps": "255:255:255.0"
+    }
+},
+"vehicle_status": {
+    "battery_percentage": 86,
+    "power_on": false,
+    "sharing_on": true,
+    "alarm_on": true,
+    "last_sync": "12:40:31",
+    "is_occupied": true,
+    "odo_meter": 324,
+    "trip_meter": 109,
+    "gear_mode": 16
+}
+},
+Icon1.5_US
+{
+"vehicle_name": "Icon1.5_US",
+"vehicle_id": 5102,
+"vehicle_owner_id": 1,
+"vehicle_uuid": "cfb2fa85-1a74-4acf-8fe6-fb8da67d4771",
+"vehicle_pub_key": "aCqBBfeT3MEiO3LIv6c7OyDPDNFpe8ytluyNFiJpqSs=",
+"shared_vehicle_data": {
+    "is_ocuupied": false,
+    "sharing_enabled": true,
+    "is_request_pending": false,
+    "idle_time_option": 60,
+    "max_assit_level": 1,
+    "vehicle_owner_profile": {
+    "address_line1": "789 Elm Street",
+    "address_line2": "Unit 12-34",
+    "city": "United States",
+    "state": "",
+    "zipcode": "123456",
+    "email": "john.doe@example.com",
+    "mobile_number": "+65 9123 4567",
+    "name": {
+        "first_name": "Deepansh",
+        "last_name": "Jain"
+    },
+    "user_id": 456,
+    "birth_date": "1990-06-15",
+    "gender": "male",
+    "weight": 70,
+    "profile_pic_url_string": "https://i1.sndcdn.com/artworks-000128560053-3cpc8a-t500x500.jpg",
+    "profile_image": null,
+    "email_verified": true,
+    "user_address": {
+        "latitude": "1.3521",
+        "longitude": "103.8198"
+    },
+    "full_name": "Deepansh Jain",
+    "address": "789 Elm Street Unit 12-34",
+    "weight_in_kg": 70
+    }
+},
+"vehicle_info": {
+    "model": "Icon",
+    "type": "Golf Cart",
+    "manufacture": "IconEv",
+    "model_year": 2023,
+    "color": "Orange",
+    "dimension": {
+    "width": 700,
+    "height": 1040,
+    "length": 1620
+    },
+    "parameters": {
+    "top_speed": 25,
+    "mileage": 80,
+    "power": 2
+    },
+    "configuration": {
+    "sn": "2323232121",
+    "motor": "pleasjsak",
+    "ecu": "sds23232232",
+    "gsm": "323242422",
+    "gps": "255:255:255.0"
+    }
+},
+"vehicle_status": {
+    "battery_percentage": 86,
+    "power_on": false,
+    "sharing_on": true,
+    "alarm_on": true,
+    "last_sync": "12:40:31",
+    "is_occupied": true,
+    "odo_meter": 324,
+    "trip_meter": 109,
+    "gear_mode": 16
+}
+},
+Icon1.5_US
+{
+"vehicle_name": "Icon1.5_US",
+"vehicle_id": 5103,
+"vehicle_owner_id": 1,
+"vehicle_uuid": "544239c2-c25d-40fd-8865-87cf6fa8b278",
+"vehicle_pub_key": "goJs17GsOxNZaOnTonc+/HBxxf5PdOTHbB6tEDSOUqE=",
+"shared_vehicle_data": {
+    "is_ocuupied": false,
+    "sharing_enabled": true,
+    "is_request_pending": false,
+    "idle_time_option": 60,
+    "max_assit_level": 1,
+    "vehicle_owner_profile": {
+    "address_line1": "789 Elm Street",
+    "address_line2": "Unit 12-34",
+    "city": "United States",
+    "state": "",
+    "zipcode": "123456",
+    "email": "john.doe@example.com",
+    "mobile_number": "+65 9123 4567",
+    "name": {
+        "first_name": "Deepansh",
+        "last_name": "Jain"
+    },
+    "user_id": 456,
+    "birth_date": "1990-06-15",
+    "gender": "male",
+    "weight": 70,
+    "profile_pic_url_string": "https://i1.sndcdn.com/artworks-000128560053-3cpc8a-t500x500.jpg",
+    "profile_image": null,
+    "email_verified": true,
+    "user_address": {
+        "latitude": "1.3521",
+        "longitude": "103.8198"
+    },
+    "full_name": "Deepansh Jain",
+    "address": "789 Elm Street Unit 12-34",
+    "weight_in_kg": 70
+    }
+},
+"vehicle_info": {
+    "model": "Icon",
+    "type": "Golf Cart",
+    "manufacture": "IconEv",
+    "model_year": 2023,
+    "color": "Green",
+    "dimension": {
+    "width": 700,
+    "height": 1040,
+    "length": 1620
+    },
+    "parameters": {
+    "top_speed": 25,
+    "mileage": 80,
+    "power": 2
+    },
+    "configuration": {
+    "sn": "2323232121",
+    "motor": "pleasjsak",
+    "ecu": "sds23232232",
+    "gsm": "323242422",
+    "gps": "255:255:255.0"
+    }
+},
+"vehicle_status": {
+    "battery_percentage": 86,
+    "power_on": false,
+    "sharing_on": true,
+    "alarm_on": true,
+    "last_sync": "12:40:31",
+    "is_occupied": true,
+    "odo_meter": 324,
+    "trip_meter": 109,
+    "gear_mode": 16
+}
+},
+Icon1.5_US
+{
+"vehicle_name": "Icon1.5_US",
+"vehicle_id": 5104,
+"vehicle_owner_id": 1,
+"vehicle_uuid": "89e1ef81-7d8f-4b0e-be7d-0ab189976644",
+"vehicle_pub_key": "3xMpTl88n2MqXr+Pmxm2A9dAJf91tXCiChk3EorNdLA=",
+"shared_vehicle_data": {
+    "is_ocuupied": false,
+    "sharing_enabled": true,
+    "is_request_pending": false,
+    "idle_time_option": 60,
+    "max_assit_level": 1,
+    "vehicle_owner_profile": {
+    "address_line1": "789 Elm Street",
+    "address_line2": "Unit 12-34",
+    "city": "United States",
+    "state": "",
+    "zipcode": "123456",
+    "email": "john.doe@example.com",
+    "mobile_number": "+65 9123 4567",
+    "name": {
+        "first_name": "Deepansh",
+        "last_name": "Jain"
+    },
+    "user_id": 456,
+    "birth_date": "1990-06-15",
+    "gender": "male",
+    "weight": 70,
+    "profile_pic_url_string": "https://i1.sndcdn.com/artworks-000128560053-3cpc8a-t500x500.jpg",
+    "profile_image": null,
+    "email_verified": true,
+    "user_address": {
+        "latitude": "1.3521",
+        "longitude": "103.8198"
+    },
+    "full_name": "Deepansh Jain",
+    "address": "789 Elm Street Unit 12-34",
+    "weight_in_kg": 70
+    }
+},
+"vehicle_info": {
+    "model": "Icon",
+    "type": "Golf Cart",
+    "manufacture": "IconEv",
+    "model_year": 2023,
+    "color": "Purple",
+    "dimension": {
+    "width": 700,
+    "height": 1040,
+    "length": 1620
+    },
+    "parameters": {
+    "top_speed": 25,
+    "mileage": 80,
+    "power": 2
+    },
+    "configuration": {
+    "sn": "2323232121",
+    "motor": "pleasjsak",
+    "ecu": "sds23232232",
+    "gsm": "323242422",
+    "gps": "255:255:255.0"
+    }
+},
+"vehicle_status": {
+    "battery_percentage": 86,
+    "power_on": false,
+    "sharing_on": true,
+    "alarm_on": true,
+    "last_sync": "12:40:31",
+    "is_occupied": true,
+    "odo_meter": 324,
+    "trip_meter": 109,
+    "gear_mode": 16
+}
+},
+Icon1.5_US
+{
+"vehicle_name": "Icon1.5_US",
+"vehicle_id": 5105,
+"vehicle_owner_id": 1,
+"vehicle_uuid": "33a98599-17d5-41d2-b7f4-484a3562b76e",
+"vehicle_pub_key": "TlpnCLw9+SjbxKQLPp3U5G1TQu8Lx9jPdaFaON3X2FI=",
+"shared_vehicle_data": {
+    "is_ocuupied": false,
+    "sharing_enabled": true,
+    "is_request_pending": false,
+    "idle_time_option": 60,
+    "max_assit_level": 1,
+    "vehicle_owner_profile": {
+    "address_line1": "789 Elm Street",
+    "address_line2": "Unit 12-34",
+    "city": "United States",
+    "state": "",
+    "zipcode": "123456",
+    "email": "john.doe@example.com",
+    "mobile_number": "+65 9123 4567",
+    "name": {
+        "first_name": "Deepansh",
+        "last_name": "Jain"
+    },
+    "user_id": 456,
+    "birth_date": "1990-06-15",
+    "gender": "male",
+    "weight": 70,
+    "profile_pic_url_string": "https://i1.sndcdn.com/artworks-000128560053-3cpc8a-t500x500.jpg",
+    "profile_image": null,
+    "email_verified": true,
+    "user_address": {
+        "latitude": "1.3521",
+        "longitude": "103.8198"
+    },
+    "full_name": "Deepansh Jain",
+    "address": "789 Elm Street Unit 12-34",
+    "weight_in_kg": 70
+    }
+},
+"vehicle_info": {
+    "model": "Icon",
+    "type": "Golf Cart",
+    "manufacture": "IconEv",
+    "model_year": 2023,
+    "color": "Indigo",
+    "dimension": {
+    "width": 700,
+    "height": 1040,
+    "length": 1620
+    },
+    "parameters": {
+    "top_speed": 25,
+    "mileage": 80,
+    "power": 2
+    },
+    "configuration": {
+    "sn": "2323232121",
+    "motor": "pleasjsak",
+    "ecu": "sds23232232",
+    "gsm": "323242422",
+    "gps": "255:255:255.0"
+    }
+},
+"vehicle_status": {
+    "battery_percentage": 86,
+    "power_on": false,
+    "sharing_on": true,
+    "alarm_on": true,
+    "last_sync": "12:40:31",
+    "is_occupied": true,
+    "odo_meter": 324,
+    "trip_meter": 109,
+    "gear_mode": 16
+}
+}

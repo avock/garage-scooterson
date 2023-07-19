@@ -209,6 +209,32 @@ def garage_detail(request, pk):
             {'response': success_message},
             status=status.HTTP_204_NO_CONTENT)
 
+@api_view(['GET'])
+def garage_summary(request):
+    if request.method == 'GET':
+        garage = GarageApp.objects.all()
+        
+        garage_deserializer = GarageDeserializer(garage, many=True)
+        garage_data = garage_deserializer.data
+        filtered_garage_data = []
+        
+        for entry in garage_data:
+            filtered_entry = {
+                'vehicle_name': entry['vehicle_name'],
+                'vehicle_id': entry['vehicle_id'],
+                'particle_name': entry['particle_name']
+            }
+            filtered_garage_data.append(filtered_entry)
+
+        # 'safe=False' for objects serialization
+        count = len(filtered_garage_data)
+        success_message = f"GET Succesful. {count} vehicles found in the global garage."
+        return JsonResponse(
+            {"response": success_message,
+             "vehicles": filtered_garage_data},
+            safe=False)
+     
+
 @api_view(['GET', 'POST', 'DELETE'])
 def user_vehicles(request, user_id, id):
     try:
@@ -339,5 +365,3 @@ def user(request, user_id):
             return JsonResponse(
                 {"response": error_message},
                 status=status.HTTP_400_BAD_REQUEST)
-            
-# TODO: add random data

@@ -3,7 +3,8 @@ let vehicleArray = []
 document.getElementById('add-vehicle').addEventListener('click', function(event) {
     event.preventDefault();
     var vehicleName = document.getElementById('newVehicleName').value;
-    var ownerId = document.getElementById('newOwnerID').value;
+    var vehicleUUID = document.getElementById('newVehicleUUID').value;
+    var vehiclePubKey = document.getElementById('newVehiclePubKey').value;
     var particle_id = document.getElementById('newParticleID').value;
     var particle_serial = document.getElementById('newParticleSerial').value;
     var particle_name = document.getElementById('newParticleName').value;
@@ -16,9 +17,9 @@ document.getElementById('add-vehicle').addEventListener('click', function(event)
 
     var raw = JSON.stringify({
         "vehicle_name": vehicleName,
-        "vehicle_owner_id": ownerId,
-        "vehicle_uuid": "0818a87e-1f2a-486b-be0b-a1481a18476d",
-        "vehicle_pub_key": "wveFrDR9TsaNSoDdZvh8qYG1GTW/UQpzYtuRXMyhHXk=",
+        "vehicle_owner_id": "1",
+        "vehicle_uuid": vehicleUUID,
+        "vehicle_pub_key": vehiclePubKey,
         "particle_id": particle_id,
         "particle_serial": particle_serial,
         "particle_name": particle_name,
@@ -102,6 +103,7 @@ document.getElementById('add-vehicle').addEventListener('click', function(event)
     let response_status;
     fetch("https://garage-scooterson.vercel.app/garage", requestOptions)
         .then(response =>{
+          console.log(response)
           response_status = response.status
         })
         .then(result => {
