@@ -19,7 +19,7 @@ class GarageApp(models.Model):
         verbose_name_plural = "Garage"
 
     def __str__(self):
-        return f"{self.vehicle_name}, vehicle_id:{self.vehicle_id}"
+        return f"{self.vehicle_name}, Vehicle ID:{self.vehicle_id}"
     
     def save(self, *args, **kwargs):
         if not self.vehicle_id:
