@@ -13,3 +13,10 @@
 2. Start virtual environment
 3. Update all dependencies in `garage-env/requirements.txt`
 4. run `python3 -m pip install -r garage-env/requirements.txt`
+
+# Server Commands for Digital Ocean
+- `sudo systemctl start nginx`
+- `sudo systemctl stop nginx`
+- `sudo systemctl restart nginx` : stops and starts service again
+- `sudo systemctl reload nginx`: reloads without dropping connection (only for configuration changes)
+- `sudo systemctl disable nginx`: disable nginx starting when server boots up (alternatively `enable`)

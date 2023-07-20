@@ -1,7 +1,6 @@
 garage-env/lib/
-dump.txt
-vehiclesList.json
-test.json
+model.json
+object.json
 .env
 .vercel
 *.pyc
