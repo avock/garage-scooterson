@@ -35,16 +35,32 @@ class GarageApp(models.Model):
     def increment_vehicle_id(self, vehicle_id):
         # Helper method to increment the vehicle ID
         if vehicle_id == "ZZZZ":
-            return "0001"
-        else:
-            chars = list(vehicle_id)
-            for i in range(len(chars) - 1, -1, -1):
-                if chars[i] != "Z":
-                    chars[i] = self.increment_char(chars[i])
-                    break
-                else:
-                    chars[i] = "0"
-            return "".join(chars)
+            return "0000"
+
+        # Define the characters allowed in the sequence
+        allowed_chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        
+        chars = list(vehicle_id)
+        carry = 1  # Initialize a carry for the increment operation
+
+        # Starting from the rightmost character, perform the increment
+        for i in range(len(chars) - 1, -1, -1):
+            if carry == 0:
+                break
+
+            char = chars[i]
+
+            if char == "Z":
+                chars[i] = "0"
+                carry = 1
+            else:
+                char_index = allowed_chars.index(char)
+                next_index = char_index + carry
+                chars[i] = allowed_chars[next_index]
+                carry = 0
+
+        return "".join(chars)
+
 
     def increment_char(self, char):
         # Helper method to increment a single character
