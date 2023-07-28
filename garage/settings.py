@@ -32,7 +32,7 @@ env = environ.Env(
 SECRET_KEY = 'django-insecure-)tfkb7b6mf&@9c5n-jk-!ghm_9vkzrbzu4&#sl-riwd$a1_xws'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
